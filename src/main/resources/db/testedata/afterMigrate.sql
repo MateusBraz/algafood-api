@@ -1,3 +1,20 @@
+set foreign_key_checks = 0;
+
+truncate cidade;
+truncate cozinha;
+truncate estado;
+truncate forma_pagamento;
+truncate grupo;
+truncate grupo_permissao;
+truncate permissao;
+truncate produto;
+truncate restaurante;
+truncate restaurante_forma_pagamento;
+truncate usuario;
+truncate usuario_grupo;
+
+set foreign_key_checks = 1;
+
 insert into cozinha (id, nome) values (1, 'Tailandesa');
 insert into cozinha (id, nome) values (2, 'Indiana');
 insert into cozinha (id, nome) values (3, 'Argentina');

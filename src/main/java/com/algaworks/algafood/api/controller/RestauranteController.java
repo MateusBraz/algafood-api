@@ -25,7 +25,7 @@ public class RestauranteController {
 
     @GetMapping
     public List<Restaurante> listar() {
-        return restauranteRepository.findAll();
+        return restauranteRepository.buscarTodos();
     }
 
     @GetMapping("/{id}")
@@ -54,7 +54,7 @@ public class RestauranteController {
             Restaurante restauranteAtual = restauranteRepository.findById(id).orElse(null);
 
             if (restauranteAtual != null) {
-                BeanUtils.copyProperties(restaurante, restauranteAtual, "id", "formasPagamento");
+                BeanUtils.copyProperties(restaurante, restauranteAtual, "id", "formasPagamento", "endereco", "dataCadastro", "produtos");
 
                 restauranteAtual = restauranteService.salvar(restauranteAtual);
                 return ResponseEntity.ok(restauranteAtual);

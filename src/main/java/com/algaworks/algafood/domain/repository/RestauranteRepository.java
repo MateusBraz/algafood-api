@@ -9,6 +9,8 @@ import java.util.List;
 
 public interface RestauranteRepository extends CustomJpaRepository<Restaurante, Long>, RestauranteRepositoryQueries, JpaSpecificationExecutor<Restaurante> {
 
+    List<Restaurante> buscarTodos();
+
     List<Restaurante> findByTaxaFreteBetween(BigDecimal taxaInicial, BigDecimal taxaFinal);
 
 //    List<Restaurante> findByNomeContainingAndCozinhaId(String nome, Long cozinha);
