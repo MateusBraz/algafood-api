@@ -1,18 +1,14 @@
 package com.algaworks.algafood.api.controller;
 
-import com.algaworks.algafood.domain.exception.EntidadeEmUsoException;
-import com.algaworks.algafood.domain.exception.EntidadeNaoEncontradaException;
 import com.algaworks.algafood.domain.model.Estado;
 import com.algaworks.algafood.domain.repository.EstadoRepository;
 import com.algaworks.algafood.domain.service.EstadoService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/estados")
@@ -29,6 +25,11 @@ public class EstadoController {
         return estadoRepository.findAll();
     }
 
+    @GetMapping("/{id}")
+    public Estado buscar(@PathVariable Long id) {
+        return estadoService.buscarOuFalhar(id);
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Estado adicionar(@RequestBody Estado estado) {
@@ -36,31 +37,14 @@ public class EstadoController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Estado> atualizar(@PathVariable Long id,
-                                            @RequestBody Estado estado) {
-        Optional<Estado> estadoAtual = estadoRepository.findById(id);
-
-        if (estadoAtual.isPresent()) {
-            BeanUtils.copyProperties(estado, estadoAtual.get(), "id");
-
-            Estado estadoAtualizado = estadoService.salvar(estadoAtual.get());
-            return ResponseEntity.ok(estadoAtualizado);
-        }
-
-        return ResponseEntity.notFound().build();
+    public Estado atualizar(@PathVariable Long id, @RequestBody Estado estado) {
+        Estado estadoAtual = estadoService.buscarOuFalhar(id);
+        BeanUtils.copyProperties(estado, estadoAtual, "id");
+        return estadoService.salvar(estadoAtual);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> remover(@PathVariable Long id) {
-        try {
-            estadoService.excluir(id);
-            return ResponseEntity.noContent().build();
-        } catch (EntidadeNaoEncontradaException e) {
-            return ResponseEntity.notFound().build();
-
-        } catch (EntidadeEmUsoException e) {
-            return ResponseEntity.status(HttpStatus.CONFLICT)
-                    .body(e.getMessage());
-        }
+    public void remover(@PathVariable Long id) {
+        estadoService.excluir(id);
     }
 }
