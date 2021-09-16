@@ -52,4 +52,5 @@ public class TesteController {
     public Optional<Restaurante> restaurantePrimeiro() {
         return restauranteRepository.buscarPrimeiro();
     }
+    
 }

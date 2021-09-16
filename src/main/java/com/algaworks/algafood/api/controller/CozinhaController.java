@@ -1,7 +1,7 @@
 package com.algaworks.algafood.api.controller;
 
 import com.algaworks.algafood.api.assembler.cozinha.CozinhaDtoAssembler;
-import com.algaworks.algafood.api.assembler.cozinha.CozinhaDtoDisassebler;
+import com.algaworks.algafood.api.assembler.cozinha.CozinhaDtoDisassembler;
 import com.algaworks.algafood.api.model.dtoinput.CozinhaDtoInput;
 import com.algaworks.algafood.api.model.dtooutput.CozinhaDtoOutput;
 import com.algaworks.algafood.domain.model.Cozinha;
@@ -28,7 +28,7 @@ public class CozinhaController {
     CozinhaDtoAssembler cozinhaDtoAssembler;
 
     @Autowired
-    CozinhaDtoDisassebler cozinhaDtoDisassebler;
+    CozinhaDtoDisassembler cozinhaDtoDisassembler;
 
     @GetMapping
     public List<CozinhaDtoOutput> listar() {
@@ -45,14 +45,14 @@ public class CozinhaController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public CozinhaDtoOutput adicionar(@Valid @RequestBody CozinhaDtoInput cozinhaDtoInput) {
-        Cozinha cozinha = cozinhaDtoDisassebler.toDomainModel(cozinhaDtoInput);
+        Cozinha cozinha = cozinhaDtoDisassembler.toDomainModel(cozinhaDtoInput);
         return cozinhaDtoAssembler.toDtoOutput(cozinhaService.salvar(cozinha));
     }
 
     @PutMapping("/{id}")
     public CozinhaDtoOutput atualizar(@PathVariable Long id, @RequestBody @Valid CozinhaDtoInput cozinhaDtoInput) {
         Cozinha cozinhaAtual = cozinhaService.buscarOuFalhar(id);
-        cozinhaDtoDisassebler.copyToDomainModel(cozinhaDtoInput, cozinhaAtual);
+        cozinhaDtoDisassembler.copyToDomainModel(cozinhaDtoInput, cozinhaAtual);
 //        BeanUtils.copyProperties(cozinha, cozinhaAtual, "id");
         return cozinhaDtoAssembler.toDtoOutput(cozinhaRepository.save(cozinhaAtual));
     }
@@ -62,4 +62,5 @@ public class CozinhaController {
     public void remover(@PathVariable Long id) {
         cozinhaService.excluir(id);
     }
+    
 }

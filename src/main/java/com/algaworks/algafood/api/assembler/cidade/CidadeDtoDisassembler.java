@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CidadeDtoDisassebler {
+public class CidadeDtoDisassembler {
 
     @Autowired
     private ModelMapper modelMapper;

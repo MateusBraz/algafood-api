@@ -1,7 +1,7 @@
 package com.algaworks.algafood.api.controller;
 
 import com.algaworks.algafood.api.assembler.estado.EstadoDtoAssembler;
-import com.algaworks.algafood.api.assembler.estado.EstadoDtoDisassebler;
+import com.algaworks.algafood.api.assembler.estado.EstadoDtoDisassembler;
 import com.algaworks.algafood.api.model.dtoinput.EstadoDtoInput;
 import com.algaworks.algafood.api.model.dtooutput.EstadoDtoOutput;
 import com.algaworks.algafood.domain.model.Estado;
@@ -28,7 +28,7 @@ public class EstadoController {
     EstadoDtoAssembler estadoDtoAssembler;
 
     @Autowired
-    EstadoDtoDisassebler estadoDtoDisassebler;
+    EstadoDtoDisassembler estadoDtoDisassembler;
 
     @GetMapping
     public List<EstadoDtoOutput> listar() {
@@ -45,14 +45,14 @@ public class EstadoController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public EstadoDtoOutput adicionar(@RequestBody @Valid EstadoDtoInput estadoDtoInput) {
-        Estado estado = estadoDtoDisassebler.toDomainModel(estadoDtoInput);
+        Estado estado = estadoDtoDisassembler.toDomainModel(estadoDtoInput);
         return estadoDtoAssembler.toDtoOutput(estadoService.salvar(estado));
     }
 
     @PutMapping("/{id}")
     public EstadoDtoOutput atualizar(@PathVariable Long id, @RequestBody @Valid EstadoDtoInput estadoDtoInput) {
         Estado estadoAtual = estadoService.buscarOuFalhar(id);
-        estadoDtoDisassebler.copyToDomainModel(estadoDtoInput, estadoAtual);
+        estadoDtoDisassembler.copyToDomainModel(estadoDtoInput, estadoAtual);
 //        BeanUtils.copyProperties(estado, estadoAtual, "id");
         return estadoDtoAssembler.toDtoOutput(estadoService.salvar(estadoAtual));
     }
@@ -62,4 +62,5 @@ public class EstadoController {
     public void remover(@PathVariable Long id) {
         estadoService.excluir(id);
     }
+    
 }
