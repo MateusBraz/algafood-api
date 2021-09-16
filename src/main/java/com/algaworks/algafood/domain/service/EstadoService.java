@@ -40,4 +40,5 @@ public class EstadoService {
         return estadoRepository.findById(id)
                 .orElseThrow(() -> new EstadoNaoEncontradoException(id));
     }
+
 }

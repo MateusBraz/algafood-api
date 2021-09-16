@@ -1,7 +1,7 @@
 package com.algaworks.algafood.api.controller;
 
 import com.algaworks.algafood.api.assembler.cidade.CidadeDtoAssembler;
-import com.algaworks.algafood.api.assembler.cidade.CidadeDtoDisassebler;
+import com.algaworks.algafood.api.assembler.cidade.CidadeDtoDisassembler;
 import com.algaworks.algafood.api.model.dtoinput.CidadeDtoInput;
 import com.algaworks.algafood.api.model.dtooutput.CidadeDtoOutput;
 import com.algaworks.algafood.domain.exception.EstadoNaoEncontradoException;
@@ -30,7 +30,7 @@ public class CidadeController {
     CidadeDtoAssembler cidadeDtoAssembler;
 
     @Autowired
-    CidadeDtoDisassebler cidadeDtoDisassebler;
+    CidadeDtoDisassembler cidadeDtoDisassembler;
 
     @GetMapping
     public List<CidadeDtoOutput> listar() {
@@ -48,7 +48,7 @@ public class CidadeController {
     @ResponseStatus(HttpStatus.CREATED)
     public CidadeDtoOutput adicionar(@RequestBody @Valid CidadeDtoInput cidadeDtoInput) {
         try {
-            Cidade cidade = cidadeDtoDisassebler.toDomainModel(cidadeDtoInput);
+            Cidade cidade = cidadeDtoDisassembler.toDomainModel(cidadeDtoInput);
             return cidadeDtoAssembler.toDtoOutput(cidadeService.salvar(cidade));
         } catch (EstadoNaoEncontradoException e) {
             throw new NegocioException(e.getMessage(), e);
@@ -59,7 +59,7 @@ public class CidadeController {
     public CidadeDtoOutput atualizar(@PathVariable Long id, @RequestBody @Valid CidadeDtoInput cidadeDtoInput) {
         try {
             Cidade cidadeAtual = cidadeService.buscarOuFalhar(id);
-            cidadeDtoDisassebler.copyToDomainModel(cidadeDtoInput, cidadeAtual);
+            cidadeDtoDisassembler.copyToDomainModel(cidadeDtoInput, cidadeAtual);
 //            BeanUtils.copyProperties(cidadeDtoInput, cidadeAtual, "id");
             return cidadeDtoAssembler.toDtoOutput(cidadeService.salvar(cidadeAtual));
         } catch (EstadoNaoEncontradoException e) {
@@ -72,4 +72,5 @@ public class CidadeController {
     public void remover(@PathVariable Long id) {
         cidadeService.excluir(id);
     }
+    
 }
