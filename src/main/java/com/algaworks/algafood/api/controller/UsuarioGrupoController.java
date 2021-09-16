@@ -1,7 +1,7 @@
 package com.algaworks.algafood.api.controller;
 
 import com.algaworks.algafood.api.assembler.grupo.GrupoDtoAssembler;
-import com.algaworks.algafood.api.model.dtooutput.GrupoDtoOutput;
+import com.algaworks.algafood.api.model.dto.output.GrupoDtoOutput;
 import com.algaworks.algafood.domain.model.Usuario;
 import com.algaworks.algafood.domain.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ public class UsuarioGrupoController {
     public List<GrupoDtoOutput> listar(@PathVariable Long usuarioId) {
         Usuario usuario = usuarioService.buscarOuFalhar(usuarioId);
 
-        return grupoDtoAssembler.toCollectionModel(usuario.getGrupos());
+        return grupoDtoAssembler.toCollectionDtoOutput(usuario.getGrupos());
     }
 
     @PutMapping("/{grupoId}")

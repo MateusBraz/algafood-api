@@ -1,6 +1,6 @@
 package com.algaworks.algafood.api.assembler.grupo;
 
-import com.algaworks.algafood.api.model.dtooutput.GrupoDtoOutput;
+import com.algaworks.algafood.api.model.dto.output.GrupoDtoOutput;
 import com.algaworks.algafood.domain.model.Grupo;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,7 +20,7 @@ public class GrupoDtoAssembler {
         return modelMapper.map(grupo, GrupoDtoOutput.class);
     }
 
-    public List<GrupoDtoOutput> toCollectionModel(Collection<Grupo> grupos) {
+    public List<GrupoDtoOutput> toCollectionDtoOutput(Collection<Grupo> grupos) {
         return grupos.stream()
                 .map(grupo -> toDtoOutput(grupo))
                 .collect(Collectors.toList());

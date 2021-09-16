@@ -2,8 +2,8 @@ package com.algaworks.algafood.api.controller;
 
 import com.algaworks.algafood.api.assembler.cidade.CidadeDtoAssembler;
 import com.algaworks.algafood.api.assembler.cidade.CidadeDtoDisassembler;
-import com.algaworks.algafood.api.model.dtoinput.CidadeDtoInput;
-import com.algaworks.algafood.api.model.dtooutput.CidadeDtoOutput;
+import com.algaworks.algafood.api.model.dto.input.CidadeDtoInput;
+import com.algaworks.algafood.api.model.dto.output.CidadeDtoOutput;
 import com.algaworks.algafood.domain.exception.EstadoNaoEncontradoException;
 import com.algaworks.algafood.domain.exception.NegocioException;
 import com.algaworks.algafood.domain.model.Cidade;
@@ -35,7 +35,7 @@ public class CidadeController {
     @GetMapping
     public List<CidadeDtoOutput> listar() {
         List<Cidade> cidades = cidadeRepository.findAll();
-        return cidadeDtoAssembler.toCollectionModel(cidades);
+        return cidadeDtoAssembler.toCollectionDtoOutput(cidades);
     }
 
     @GetMapping("/{id}")
@@ -72,5 +72,5 @@ public class CidadeController {
     public void remover(@PathVariable Long id) {
         cidadeService.excluir(id);
     }
-    
+
 }

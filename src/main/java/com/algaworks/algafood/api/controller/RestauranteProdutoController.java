@@ -2,8 +2,8 @@ package com.algaworks.algafood.api.controller;
 
 import com.algaworks.algafood.api.assembler.produto.ProdutoDtoAssembler;
 import com.algaworks.algafood.api.assembler.produto.ProdutoDtoDisassembler;
-import com.algaworks.algafood.api.model.dtoinput.ProdutoDtoInput;
-import com.algaworks.algafood.api.model.dtooutput.ProdutoDtoOutput;
+import com.algaworks.algafood.api.model.dto.input.ProdutoDtoInput;
+import com.algaworks.algafood.api.model.dto.output.ProdutoDtoOutput;
 import com.algaworks.algafood.domain.model.Produto;
 import com.algaworks.algafood.domain.model.Restaurante;
 import com.algaworks.algafood.domain.repository.ProdutoRepository;
@@ -36,12 +36,18 @@ public class RestauranteProdutoController {
     private ProdutoDtoDisassembler produtoDtoDisassembler;
 
     @GetMapping
-    public List<ProdutoDtoOutput> listar(@PathVariable Long restauranteId) {
+    public List<ProdutoDtoOutput> listar(@PathVariable Long restauranteId, @RequestParam(required = false) boolean incluirInativos) {
         Restaurante restaurante = restauranteService.buscarOuFalhar(restauranteId);
 
-        List<Produto> todosProdutos = produtoRepository.findByRestaurante(restaurante);
+        List<Produto> todosProdutos = null;
 
-        return produtoDtoAssembler.toCollectionModel(todosProdutos);
+        if (incluirInativos) {
+            todosProdutos = produtoRepository.findTodosByRestaurante(restaurante);
+        } else {
+            todosProdutos = produtoRepository.findAtivosByRestaurante(restaurante);
+        }
+
+        return produtoDtoAssembler.toCollectionDtoOutput(todosProdutos);
     }
 
     @GetMapping("/{produtoId}")

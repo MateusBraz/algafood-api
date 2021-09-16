@@ -1,6 +1,6 @@
 package com.algaworks.algafood.api.assembler.estado;
 
-import com.algaworks.algafood.api.model.dtooutput.EstadoDtoOutput;
+import com.algaworks.algafood.api.model.dto.output.EstadoDtoOutput;
 import com.algaworks.algafood.domain.model.Estado;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,10 +19,10 @@ public class EstadoDtoAssembler {
         return modelMapper.map(estado, EstadoDtoOutput.class);
     }
 
-    public List<EstadoDtoOutput> toCollectionModel(List<Estado> estados) {
+    public List<EstadoDtoOutput> toCollectionDtoOutput(List<Estado> estados) {
         return estados.stream()
                 .map(estado -> toDtoOutput(estado))
                 .collect(Collectors.toList());
     }
-    
+
 }

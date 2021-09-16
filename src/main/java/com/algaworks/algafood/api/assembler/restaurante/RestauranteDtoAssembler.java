@@ -1,6 +1,6 @@
 package com.algaworks.algafood.api.assembler.restaurante;
 
-import com.algaworks.algafood.api.model.dtooutput.RestauranteDtoOutput;
+import com.algaworks.algafood.api.model.dto.output.RestauranteDtoOutput;
 import com.algaworks.algafood.domain.model.Restaurante;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class RestauranteDtoAssembler {
         return modelMapper.map(restaurante, RestauranteDtoOutput.class);
     }
 
-    public List<RestauranteDtoOutput> toCollectionModel(List<Restaurante> restaurantes) {
+    public List<RestauranteDtoOutput> toCollectionDtoOutput(List<Restaurante> restaurantes) {
         return restaurantes.stream()
                 .map(restaurante -> toDtoOutput(restaurante))
                 .collect(Collectors.toList());

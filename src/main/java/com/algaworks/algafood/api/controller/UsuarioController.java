@@ -2,10 +2,10 @@ package com.algaworks.algafood.api.controller;
 
 import com.algaworks.algafood.api.assembler.usuario.UsuarioDtoAssembler;
 import com.algaworks.algafood.api.assembler.usuario.UsuarioDtoDisassembler;
-import com.algaworks.algafood.api.model.dtoinput.SenhaDtoInput;
-import com.algaworks.algafood.api.model.dtoinput.UsuarioComSenhaDtoInput;
-import com.algaworks.algafood.api.model.dtoinput.UsuarioDtoInput;
-import com.algaworks.algafood.api.model.dtooutput.UsuarioDtoOutput;
+import com.algaworks.algafood.api.model.dto.input.SenhaDtoInput;
+import com.algaworks.algafood.api.model.dto.input.UsuarioComSenhaDtoInput;
+import com.algaworks.algafood.api.model.dto.input.UsuarioDtoInput;
+import com.algaworks.algafood.api.model.dto.output.UsuarioDtoOutput;
 import com.algaworks.algafood.domain.model.Usuario;
 import com.algaworks.algafood.domain.repository.UsuarioRepository;
 import com.algaworks.algafood.domain.service.UsuarioService;
@@ -35,7 +35,7 @@ public class UsuarioController {
     @GetMapping
     public List<UsuarioDtoOutput> listar() {
         List<Usuario> todasUsuarios = usuarioRepository.findAll();
-        return usuarioDtoAssembler.toCollectionModel(todasUsuarios);
+        return usuarioDtoAssembler.toCollectionDtoOutput(todasUsuarios);
     }
 
     @GetMapping("/{usuarioId}")

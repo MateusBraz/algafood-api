@@ -3,9 +3,9 @@ package com.algaworks.algafood.api.controller;
 import com.algaworks.algafood.api.assembler.pedido.PedidoDtoAssembler;
 import com.algaworks.algafood.api.assembler.pedido.PedidoDtoDisassembler;
 import com.algaworks.algafood.api.assembler.pedido.PedidoResumoDtoAssembler;
-import com.algaworks.algafood.api.model.dtoinput.PedidoDtoInput;
-import com.algaworks.algafood.api.model.dtooutput.PedidoDtoOutput;
-import com.algaworks.algafood.api.model.dtooutput.resumo.PedidoResumoDtoOutput;
+import com.algaworks.algafood.api.model.dto.input.PedidoDtoInput;
+import com.algaworks.algafood.api.model.dto.output.PedidoDtoOutput;
+import com.algaworks.algafood.api.model.dto.output.resumo.PedidoResumoDtoOutput;
 import com.algaworks.algafood.domain.exception.EntidadeNaoEncontradaException;
 import com.algaworks.algafood.domain.exception.NegocioException;
 import com.algaworks.algafood.domain.model.Pedido;
@@ -38,10 +38,29 @@ public class PedidoController {
     @Autowired
     private PedidoDtoDisassembler pedidoDtoDisassembler;
 
+//    @GetMapping
+//    public MappingJacksonValue listar(@RequestParam(required = false) String campos) {
+//        List<Pedido> pedidos = pedidoRepository.findAll();
+//        List<PedidoResumoDtoOutput> pedidosDtoOutput = pedidoResumoDtoAssembler.toCollectionDtoOutput(pedidos);
+//
+//        MappingJacksonValue pedidosWrapper = new MappingJacksonValue(pedidosDtoOutput);
+//
+//        SimpleFilterProvider filterProvider = new SimpleFilterProvider();
+//        filterProvider.addFilter("pedidoFilter", SimpleBeanPropertyFilter.serializeAll());
+//
+//        if (StringUtils.isNotBlank(campos)) {
+//            filterProvider.addFilter("pedidoFilter", SimpleBeanPropertyFilter.filterOutAllExcept(campos.split(",")));
+//        }
+//
+//        pedidosWrapper.setFilters(filterProvider);
+//
+//        return pedidosWrapper;
+//    }
+
     @GetMapping
     public List<PedidoResumoDtoOutput> listar() {
         List<Pedido> todosPedidos = pedidoRepository.findAll();
-        return pedidoResumoDtoAssembler.toCollectionModel(todosPedidos);
+        return pedidoResumoDtoAssembler.toCollectionDtoOutput(todosPedidos);
     }
 
     @GetMapping("/{codigoPedido}")

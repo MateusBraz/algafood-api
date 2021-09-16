@@ -2,8 +2,8 @@ package com.algaworks.algafood.api.controller;
 
 import com.algaworks.algafood.api.assembler.cozinha.CozinhaDtoAssembler;
 import com.algaworks.algafood.api.assembler.cozinha.CozinhaDtoDisassembler;
-import com.algaworks.algafood.api.model.dtoinput.CozinhaDtoInput;
-import com.algaworks.algafood.api.model.dtooutput.CozinhaDtoOutput;
+import com.algaworks.algafood.api.model.dto.input.CozinhaDtoInput;
+import com.algaworks.algafood.api.model.dto.output.CozinhaDtoOutput;
 import com.algaworks.algafood.domain.model.Cozinha;
 import com.algaworks.algafood.domain.repository.CozinhaRepository;
 import com.algaworks.algafood.domain.service.CozinhaService;
@@ -33,7 +33,7 @@ public class CozinhaController {
     @GetMapping
     public List<CozinhaDtoOutput> listar() {
         List<Cozinha> cozinhas = cozinhaRepository.findAll();
-        return cozinhaDtoAssembler.toCollectionModel(cozinhas);
+        return cozinhaDtoAssembler.toCollectionDtoOutput(cozinhas);
     }
 
     @GetMapping("/{id}")
@@ -62,5 +62,5 @@ public class CozinhaController {
     public void remover(@PathVariable Long id) {
         cozinhaService.excluir(id);
     }
-    
+
 }
