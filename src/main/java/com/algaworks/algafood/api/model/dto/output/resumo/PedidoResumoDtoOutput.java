@@ -1,6 +1,5 @@
 package com.algaworks.algafood.api.model.dto.output.resumo;
 
-import com.algaworks.algafood.api.model.dto.output.UsuarioDtoOutput;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,6 +18,7 @@ public class PedidoResumoDtoOutput {
     private String status;
     private OffsetDateTime dataCriacao;
     private RestauranteResumoDtoOutput restaurante;
-    private UsuarioDtoOutput cliente;
+//    private UsuarioDtoOutput cliente;
 
+    private String nomeCliente;
 }
