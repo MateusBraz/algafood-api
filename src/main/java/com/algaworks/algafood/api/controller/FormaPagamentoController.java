@@ -2,8 +2,8 @@ package com.algaworks.algafood.api.controller;
 
 import com.algaworks.algafood.api.assembler.formapagamento.FormaPagamentoDtoAssembler;
 import com.algaworks.algafood.api.assembler.formapagamento.FormaPagamentoDtoDisassembler;
-import com.algaworks.algafood.api.model.dtoinput.FormaPagamentoDtoInput;
-import com.algaworks.algafood.api.model.dtooutput.FormaPagamentoDtoOutput;
+import com.algaworks.algafood.api.model.dto.input.FormaPagamentoDtoInput;
+import com.algaworks.algafood.api.model.dto.output.FormaPagamentoDtoOutput;
 import com.algaworks.algafood.domain.model.FormaPagamento;
 import com.algaworks.algafood.domain.repository.FormaPagamentoRepository;
 import com.algaworks.algafood.domain.service.FormaPagamentoService;
@@ -33,7 +33,7 @@ public class FormaPagamentoController {
     @GetMapping
     public List<FormaPagamentoDtoOutput> listar() {
         List<FormaPagamento> formasPagamento = formaPagamentoRepository.findAll();
-        return formaPagamentoDtoAssembler.toCollectionModel(formasPagamento);
+        return formaPagamentoDtoAssembler.toCollectionDtoOutput(formasPagamento);
     }
 
     @GetMapping("/{id}")

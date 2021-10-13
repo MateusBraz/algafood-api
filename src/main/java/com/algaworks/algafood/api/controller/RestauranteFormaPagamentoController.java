@@ -1,7 +1,7 @@
 package com.algaworks.algafood.api.controller;
 
 import com.algaworks.algafood.api.assembler.formapagamento.FormaPagamentoDtoAssembler;
-import com.algaworks.algafood.api.model.dtooutput.FormaPagamentoDtoOutput;
+import com.algaworks.algafood.api.model.dto.output.FormaPagamentoDtoOutput;
 import com.algaworks.algafood.domain.model.Restaurante;
 import com.algaworks.algafood.domain.service.RestauranteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ public class RestauranteFormaPagamentoController {
     @GetMapping
     public List<FormaPagamentoDtoOutput> listar(@PathVariable Long restauranteId) {
         Restaurante restaurante = restauranteService.buscarOuFalhar(restauranteId);
-        return formaPagamentoDtoAssembler.toCollectionModel(restaurante.getFormasPagamento());
+        return formaPagamentoDtoAssembler.toCollectionDtoOutput(restaurante.getFormasPagamento());
     }
 
     @DeleteMapping("/{formaPagamentoId}")

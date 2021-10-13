@@ -88,9 +88,9 @@ values (1, 1),
        (6, 3);
 
 insert into produto (nome, descricao, preco, ativo, restaurante_id)
-values ('Porco com molho agridoce', 'Deliciosa carne suína ao molho especial', 78.90, 1, 1);
+values ('Porco com molho agridoce', 'Deliciosa carne suína ao molho especial', 78.90, false, 1);
 insert into produto (nome, descricao, preco, ativo, restaurante_id)
-values ('Camarão tailandês', '16 camarões grandes ao molho picante', 110, 1, 1);
+values ('Camarão tailandês', '16 camarões grandes ao molho picante', 110, true, 1);
 
 insert into produto (nome, descricao, preco, ativo, restaurante_id)
 values ('Salada picante com carne grelhada',
@@ -150,10 +150,10 @@ values (1, 5),
 insert into pedido (id, codigo, restaurante_id, usuario_cliente_id, forma_pagamento_id, endereco_cidade_id,
                     endereco_cep,
                     endereco_logradouro, endereco_numero, endereco_complemento, endereco_bairro,
-                    status, data_criacao, subtotal, taxa_frete, valor_total)
+                    status, data_criacao, data_confirmacao, subtotal, taxa_frete, valor_total)
 values (1, 'bd7f11da-aebe-43ac-9a38-e582595ad4e5', 1, 1, 1, 1, '38400-000', 'Rua Floriano Peixoto', '500', 'Apto 801',
         'Brasil',
-        'CRIADO', utc_timestamp, 298.90, 10, 308.90);
+        'CONFIRMADO', '2021-10-11 09:58:00', '2021-10-11 10:58:00', 298.90, 10, 308.90);
 
 insert into item_pedido (id, pedido_id, produto_id, quantidade, preco_unitario, preco_total, observacao)
 values (1, 1, 1, 1, 78.9, 78.9, null);
@@ -165,9 +165,29 @@ values (2, 1, 2, 2, 110, 220, 'Menos picante, por favor');
 insert into pedido (id, codigo, restaurante_id, usuario_cliente_id, forma_pagamento_id, endereco_cidade_id,
                     endereco_cep,
                     endereco_logradouro, endereco_numero, endereco_complemento, endereco_bairro,
-                    status, data_criacao, subtotal, taxa_frete, valor_total)
-values (2, '59f794b1-33ad-48d2-b7de-6d07fead913d', 4, 1, 2, 1, '38400-111', 'Rua Acre', '300', 'Casa 2', 'Centro',
-        'CRIADO', utc_timestamp, 79, 0, 79);
+                    status, data_criacao, data_confirmacao, subtotal, taxa_frete, valor_total)
+values (2, '59f794b1-33ad-48d2-b7de-6d07fead913d', 4, 2, 2, 1, '38400-111', 'Rua Acre', '300', 'Casa 2', 'Centro',
+        'CONFIRMADO', '2021-10-12 09:58:00', '2021-10-12 10:58:00', 79, 0, 79);
 
 insert into item_pedido (id, pedido_id, produto_id, quantidade, preco_unitario, preco_total, observacao)
 values (3, 2, 6, 1, 79, 79, 'Ao ponto');
+
+insert into pedido (id, codigo, restaurante_id, usuario_cliente_id, forma_pagamento_id, endereco_cidade_id,
+                    endereco_cep,
+                    endereco_logradouro, endereco_numero, endereco_complemento, endereco_bairro,
+                    status, data_criacao, data_confirmacao, subtotal, taxa_frete, valor_total)
+values (3, '674c69a3-c118-48d5-98d3-70ecb1eac2c2', 4, 3, 2, 1, '38400-111', 'Rua Acre', '300', 'Casa 2', 'Centro',
+        'CONFIRMADO', '2021-10-12 02:00:00', '2021-10-12 02:58:00', 158, 0, 158);
+
+insert into item_pedido (id, pedido_id, produto_id, quantidade, preco_unitario, preco_total, observacao)
+values (4, 3, 6, 2, 158, 79, 'Ao ponto');
+
+insert into pedido (id, codigo, restaurante_id, usuario_cliente_id, forma_pagamento_id, endereco_cidade_id,
+                    endereco_cep,
+                    endereco_logradouro, endereco_numero, endereco_complemento, endereco_bairro,
+                    status, data_criacao, data_confirmacao, subtotal, taxa_frete, valor_total)
+values (4, 'e7ca5e2e-32cd-4380-8897-fcc1675e6940', 4, 4, 2, 1, '38400-111', 'Rua Acre', '300', 'Casa 2', 'Centro',
+        'CONFIRMADO', '2021-10-12 02:00:00', '2021-10-12 02:58:00', 237, 0, 237);
+
+insert into item_pedido (id, pedido_id, produto_id, quantidade, preco_unitario, preco_total, observacao)
+values (5, 4, 6, 3, 237, 79, 'Ao ponto');

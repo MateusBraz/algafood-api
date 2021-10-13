@@ -1,6 +1,6 @@
 package com.algaworks.algafood.api.assembler.cozinha;
 
-import com.algaworks.algafood.api.model.dtooutput.CozinhaDtoOutput;
+import com.algaworks.algafood.api.model.dto.output.CozinhaDtoOutput;
 import com.algaworks.algafood.domain.model.Cozinha;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class CozinhaDtoAssembler {
         return modelMapper.map(cozinha, CozinhaDtoOutput.class);
     }
 
-    public List<CozinhaDtoOutput> toCollectionModel(List<Cozinha> cozinhas) {
+    public List<CozinhaDtoOutput> toCollectionDtoOutput(List<Cozinha> cozinhas) {
         return cozinhas.stream()
                 .map(cozinha -> toDtoOutput(cozinha))
                 .collect(Collectors.toList());

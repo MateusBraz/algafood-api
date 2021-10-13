@@ -1,7 +1,7 @@
 package com.algaworks.algafood.api.controller;
 
 import com.algaworks.algafood.api.assembler.usuario.UsuarioDtoAssembler;
-import com.algaworks.algafood.api.model.dtooutput.UsuarioDtoOutput;
+import com.algaworks.algafood.api.model.dto.output.UsuarioDtoOutput;
 import com.algaworks.algafood.domain.model.Restaurante;
 import com.algaworks.algafood.domain.service.RestauranteService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ public class RestauranteUsuarioResponsavelController {
     @GetMapping
     public List<UsuarioDtoOutput> listar(@PathVariable Long restauranteId) {
         Restaurante restaurante = restauranteService.buscarOuFalhar(restauranteId);
-        return usuarioDtoAssembler.toCollectionModel(restaurante.getResponsaveis());
+        return usuarioDtoAssembler.toCollectionDtoOutput(restaurante.getResponsaveis());
     }
 
     @PutMapping("/{usuarioId}")

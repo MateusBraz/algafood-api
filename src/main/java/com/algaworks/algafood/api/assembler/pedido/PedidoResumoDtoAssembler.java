@@ -1,6 +1,6 @@
 package com.algaworks.algafood.api.assembler.pedido;
 
-import com.algaworks.algafood.api.model.dtooutput.resumo.PedidoResumoDtoOutput;
+import com.algaworks.algafood.api.model.dto.output.resumo.PedidoResumoDtoOutput;
 import com.algaworks.algafood.domain.model.Pedido;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ public class PedidoResumoDtoAssembler {
         return modelMapper.map(pedido, PedidoResumoDtoOutput.class);
     }
 
-    public List<PedidoResumoDtoOutput> toCollectionModel(List<Pedido> pedidos) {
+    public List<PedidoResumoDtoOutput> toCollectionDtoOutput(List<Pedido> pedidos) {
         return pedidos.stream()
                 .map(pedido -> toDtoOutput(pedido))
                 .collect(Collectors.toList());

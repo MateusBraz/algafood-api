@@ -2,8 +2,8 @@ package com.algaworks.algafood.api.controller;
 
 import com.algaworks.algafood.api.assembler.grupo.GrupoDtoAssembler;
 import com.algaworks.algafood.api.assembler.grupo.GrupoDtoDisassembler;
-import com.algaworks.algafood.api.model.dtoinput.GrupoDtoInput;
-import com.algaworks.algafood.api.model.dtooutput.GrupoDtoOutput;
+import com.algaworks.algafood.api.model.dto.input.GrupoDtoInput;
+import com.algaworks.algafood.api.model.dto.output.GrupoDtoOutput;
 import com.algaworks.algafood.domain.model.Grupo;
 import com.algaworks.algafood.domain.repository.GrupoRepository;
 import com.algaworks.algafood.domain.service.GrupoService;
@@ -33,7 +33,7 @@ public class GrupoController {
     @GetMapping
     public List<GrupoDtoOutput> listar() {
         List<Grupo> grupos = grupoRepository.findAll();
-        return grupoDtoAssembler.toCollectionModel(grupos);
+        return grupoDtoAssembler.toCollectionDtoOutput(grupos);
     }
 
     @GetMapping("/{id}")

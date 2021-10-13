@@ -2,12 +2,16 @@ package com.algaworks.algafood.api.controller;
 
 import com.algaworks.algafood.api.assembler.cozinha.CozinhaDtoAssembler;
 import com.algaworks.algafood.api.assembler.cozinha.CozinhaDtoDisassembler;
-import com.algaworks.algafood.api.model.dtoinput.CozinhaDtoInput;
-import com.algaworks.algafood.api.model.dtooutput.CozinhaDtoOutput;
+import com.algaworks.algafood.api.model.dto.input.CozinhaDtoInput;
+import com.algaworks.algafood.api.model.dto.output.CozinhaDtoOutput;
 import com.algaworks.algafood.domain.model.Cozinha;
 import com.algaworks.algafood.domain.repository.CozinhaRepository;
 import com.algaworks.algafood.domain.service.CozinhaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,9 +35,11 @@ public class CozinhaController {
     CozinhaDtoDisassembler cozinhaDtoDisassembler;
 
     @GetMapping
-    public List<CozinhaDtoOutput> listar() {
-        List<Cozinha> cozinhas = cozinhaRepository.findAll();
-        return cozinhaDtoAssembler.toCollectionModel(cozinhas);
+    public Page<CozinhaDtoOutput> listar(@PageableDefault(size = 10) Pageable pageable) {
+        Page<Cozinha> cozinhasPage = cozinhaRepository.findAll(pageable);
+        List<CozinhaDtoOutput> cozinhasDtoOutput = cozinhaDtoAssembler.toCollectionDtoOutput(cozinhasPage.getContent());
+        Page<CozinhaDtoOutput> cozinhasDtoOutputPage = new PageImpl<>(cozinhasDtoOutput, pageable, cozinhasPage.getTotalElements());
+        return cozinhasDtoOutputPage;
     }
 
     @GetMapping("/{id}")
@@ -62,5 +68,5 @@ public class CozinhaController {
     public void remover(@PathVariable Long id) {
         cozinhaService.excluir(id);
     }
-    
+
 }

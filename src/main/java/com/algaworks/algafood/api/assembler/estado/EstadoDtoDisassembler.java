@@ -1,6 +1,6 @@
 package com.algaworks.algafood.api.assembler.estado;
 
-import com.algaworks.algafood.api.model.dtoinput.EstadoDtoInput;
+import com.algaworks.algafood.api.model.dto.input.EstadoDtoInput;
 import com.algaworks.algafood.domain.model.Estado;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

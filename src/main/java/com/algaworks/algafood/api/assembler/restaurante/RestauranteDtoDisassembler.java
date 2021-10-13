@@ -1,6 +1,6 @@
 package com.algaworks.algafood.api.assembler.restaurante;
 
-import com.algaworks.algafood.api.model.dtoinput.RestauranteDtoInput;
+import com.algaworks.algafood.api.model.dto.input.RestauranteDtoInput;
 import com.algaworks.algafood.domain.model.Cidade;
 import com.algaworks.algafood.domain.model.Cozinha;
 import com.algaworks.algafood.domain.model.Restaurante;
