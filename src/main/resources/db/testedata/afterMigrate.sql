@@ -131,8 +131,8 @@ values (1, 1),
        (3, 1);
 
 insert into usuario (id, nome, email, senha, data_cadastro)
-values (1, 'João da Silva', 'joao.ger@algafood.com', '123', utc_timestamp),
-       (2, 'Maria Joaquina', 'maria.vnd@algafood.com', '123', utc_timestamp),
+values (1, 'Mateus Braz', 'silvabraz96@gmail.com', '123', utc_timestamp),
+       (2, 'Fabrício Ventura', 'ventura.programing@gmail.com', '123', utc_timestamp),
        (3, 'José Souza', 'jose.aux@algafood.com', '123', utc_timestamp),
        (4, 'Sebastião Martins', 'sebastiao.cad@algafood.com', '123', utc_timestamp);
 
@@ -154,7 +154,7 @@ insert into pedido (id, codigo, restaurante_id, usuario_cliente_id, forma_pagame
                     status, data_criacao, data_confirmacao, subtotal, taxa_frete, valor_total)
 values (1, 'bd7f11da-aebe-43ac-9a38-e582595ad4e5', 1, 1, 1, 1, '38400-000', 'Rua Floriano Peixoto', '500', 'Apto 801',
         'Brasil',
-        'CONFIRMADO', '2021-10-11 09:58:00', '2021-10-11 10:58:00', 298.90, 10, 308.90);
+        'CRIADO', '2021-10-11 09:58:00', '2021-10-11 10:58:00', 298.90, 10, 308.90);
 
 insert into item_pedido (id, pedido_id, produto_id, quantidade, preco_unitario, preco_total, observacao)
 values (1, 1, 1, 1, 78.9, 78.9, null);
@@ -168,7 +168,7 @@ insert into pedido (id, codigo, restaurante_id, usuario_cliente_id, forma_pagame
                     endereco_logradouro, endereco_numero, endereco_complemento, endereco_bairro,
                     status, data_criacao, data_confirmacao, subtotal, taxa_frete, valor_total)
 values (2, '59f794b1-33ad-48d2-b7de-6d07fead913d', 4, 2, 2, 1, '38400-111', 'Rua Acre', '300', 'Casa 2', 'Centro',
-        'CONFIRMADO', '2021-10-12 09:58:00', '2021-10-12 10:58:00', 79, 0, 79);
+        'CRIADO', '2021-10-12 09:58:00', '2021-10-12 10:58:00', 79, 0, 79);
 
 insert into item_pedido (id, pedido_id, produto_id, quantidade, preco_unitario, preco_total, observacao)
 values (3, 2, 6, 1, 79, 79, 'Ao ponto');
