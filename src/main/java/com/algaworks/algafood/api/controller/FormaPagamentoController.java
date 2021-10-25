@@ -8,11 +8,17 @@ import com.algaworks.algafood.domain.model.FormaPagamento;
 import com.algaworks.algafood.domain.repository.FormaPagamentoRepository;
 import com.algaworks.algafood.domain.service.FormaPagamentoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.CacheControl;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.context.request.ServletWebRequest;
+import org.springframework.web.filter.ShallowEtagHeaderFilter;
 
 import javax.validation.Valid;
+import java.time.OffsetDateTime;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping("/formas-pagamento")
@@ -31,15 +37,40 @@ public class FormaPagamentoController {
     private FormaPagamentoDtoDisassembler formaPagamentoDtoDisassembler;
 
     @GetMapping
-    public List<FormaPagamentoDtoOutput> listar() {
+    public ResponseEntity<List<FormaPagamentoDtoOutput>> listar(ServletWebRequest request) {
+        ShallowEtagHeaderFilter.disableContentCaching(request.getRequest());
+
+        String eTag = "0";
+
+        OffsetDateTime dataUltimaAtualizacao = formaPagamentoRepository.getDataUltimaAtualizacao();
+
+        if (dataUltimaAtualizacao != null) {
+            eTag = String.valueOf(dataUltimaAtualizacao.toEpochSecond());
+        }
+
+        if (request.checkNotModified(eTag)) {
+            return null;
+        }
+
         List<FormaPagamento> formasPagamento = formaPagamentoRepository.findAll();
-        return formaPagamentoDtoAssembler.toCollectionDtoOutput(formasPagamento);
+        List<FormaPagamentoDtoOutput> formasPagamentoDtoOutput = formaPagamentoDtoAssembler.toCollectionDtoOutput(formasPagamento);
+        return ResponseEntity.ok()
+//                .cacheControl(CacheControl.maxAge(10, TimeUnit.SECONDS)
+//                .cacheControl(CacheControl.maxAge(10, TimeUnit.SECONDS).cachePrivate())
+                .cacheControl(CacheControl.maxAge(10, TimeUnit.SECONDS).cachePublic())
+                .eTag(eTag)
+//                .cacheControl(CacheControl.noCache())
+//                .cacheControl(CacheControl.noStore())
+                .body(formasPagamentoDtoOutput);
     }
 
     @GetMapping("/{id}")
-    public FormaPagamentoDtoOutput buscar(@PathVariable Long id) {
+    public ResponseEntity<FormaPagamentoDtoOutput> buscar(@PathVariable Long id) {
         FormaPagamento formaPagamento = formaPagamentoService.buscarOuFalhar(id);
-        return formaPagamentoDtoAssembler.toDtoOutput(formaPagamento);
+        FormaPagamentoDtoOutput formaPagamentoDtoOutput = formaPagamentoDtoAssembler.toDtoOutput(formaPagamento);
+        return ResponseEntity.ok()
+                .cacheControl(CacheControl.maxAge(10, TimeUnit.SECONDS))
+                .body(formaPagamentoDtoOutput);
     }
 
     @PostMapping
