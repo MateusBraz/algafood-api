@@ -3,6 +3,7 @@ package com.algaworks.algafood.api.controller;
 import com.algaworks.algafood.api.assembler.produto.FotoProdutoDtoAssembler;
 import com.algaworks.algafood.api.model.dto.input.FotoProdutoInput;
 import com.algaworks.algafood.api.model.dto.output.FotoProdutoDtoOutput;
+import com.algaworks.algafood.api.openapi.controller.RestauranteProdutoFotoControllerOpenApi;
 import com.algaworks.algafood.domain.exception.EntidadeNaoEncontradaException;
 import com.algaworks.algafood.domain.model.FotoProduto;
 import com.algaworks.algafood.domain.model.Produto;
@@ -24,8 +25,8 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/restaurantes/{restauranteId}/produtos/{produtoId}/foto")
-public class RestauranteProdutoFotoController {
+@RequestMapping(path = "/restaurantes/{restauranteId}/produtos/{produtoId}/foto", produces = MediaType.APPLICATION_JSON_VALUE)
+public class RestauranteProdutoFotoController implements RestauranteProdutoFotoControllerOpenApi {
 
     @Autowired
     private ProdutoService produtoService;
@@ -39,13 +40,13 @@ public class RestauranteProdutoFotoController {
     @Autowired
     private FotoStorageService fotoStorageService;
 
-    @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping
     public FotoProdutoDtoOutput buscar(@PathVariable Long restauranteId, @PathVariable Long produtoId) {
         FotoProduto fotoProduto = catalogoFotoProdutoService.buscarOuFalhar(restauranteId, produtoId);
         return fotoProdutoDtoAssembler.toDtoOutput(fotoProduto);
     }
 
-    @GetMapping
+    @GetMapping(produces = MediaType.ALL_VALUE)
     public ResponseEntity<?> buscarArquivo(@PathVariable Long restauranteId, @PathVariable Long produtoId, @RequestHeader(name = "accept") String acceptHeader) throws HttpMediaTypeNotAcceptableException {
         try {
             FotoProduto fotoProduto = catalogoFotoProdutoService.buscarOuFalhar(restauranteId, produtoId);
@@ -70,11 +71,15 @@ public class RestauranteProdutoFotoController {
         }
     }
 
+    @Override
     @PutMapping(consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-    public FotoProdutoDtoOutput atualizarFoto(@PathVariable Long restauranteId, @PathVariable Long produtoId, @Valid FotoProdutoInput fotoProdutoInput) throws IOException {
+    public FotoProdutoDtoOutput atualizarFoto(@PathVariable Long restauranteId,
+                                              @PathVariable Long produtoId,
+                                              @Valid FotoProdutoInput fotoProdutoInput,
+                                              @RequestPart(required = true) MultipartFile arquivo) throws IOException {
         Produto produto = produtoService.buscarOuFalhar(restauranteId, produtoId);
 
-        MultipartFile arquivo = fotoProdutoInput.getArquivo();
+//        MultipartFile arquivo = fotoProdutoInput.getArquivo();
 
         FotoProduto foto = new FotoProduto();
         foto.setProduto(produto);
