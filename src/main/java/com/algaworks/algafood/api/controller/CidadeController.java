@@ -4,6 +4,7 @@ import com.algaworks.algafood.api.assembler.cidade.CidadeDtoAssembler;
 import com.algaworks.algafood.api.assembler.cidade.CidadeDtoDisassembler;
 import com.algaworks.algafood.api.model.dto.input.CidadeDtoInput;
 import com.algaworks.algafood.api.model.dto.output.CidadeDtoOutput;
+import com.algaworks.algafood.api.openapi.controller.CidadeControllerOpenApi;
 import com.algaworks.algafood.domain.exception.EstadoNaoEncontradoException;
 import com.algaworks.algafood.domain.exception.NegocioException;
 import com.algaworks.algafood.domain.model.Cidade;
@@ -11,14 +12,15 @@ import com.algaworks.algafood.domain.repository.CidadeRepository;
 import com.algaworks.algafood.domain.service.CidadeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/cidades")
-public class CidadeController {
+@RequestMapping(path = "/cidades", produces = MediaType.APPLICATION_JSON_VALUE)
+public class CidadeController implements CidadeControllerOpenApi {
 
     @Autowired
     CidadeRepository cidadeRepository;
