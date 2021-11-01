@@ -19,15 +19,15 @@ import com.algaworks.algafood.infrastructure.repository.spec.PedidoSpecs;
 import com.google.common.collect.ImmutableBiMap;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.data.web.PagedResourcesAssembler;
+import org.springframework.hateoas.PagedModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.List;
 
 @RestController
 @RequestMapping(path = "/pedidos", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -47,6 +47,9 @@ public class PedidoController implements PedidoControllerOpenApi {
 
     @Autowired
     private PedidoDtoDisassembler pedidoDtoDisassembler;
+
+    @Autowired
+    private PagedResourcesAssembler<Pedido> pagedResourcesAssembler;
 
 //    @GetMapping
 //    public MappingJacksonValue listar(@RequestParam(required = false) String campos) {
@@ -68,18 +71,18 @@ public class PedidoController implements PedidoControllerOpenApi {
 //    }
 
     @GetMapping
-    public Page<PedidoResumoDtoOutput> pesquisar(PedidoFilter filtro, @PageableDefault(size = 10) Pageable pageable) {
+    public PagedModel<PedidoResumoDtoOutput> pesquisar(PedidoFilter filtro, @PageableDefault(size = 10) Pageable pageable) {
         pageable = traduzirPageable(pageable);
+
         Page<Pedido> pedidosPage = pedidoRepository.findAll(PedidoSpecs.usandoFiltro(filtro), pageable);
-        List<PedidoResumoDtoOutput> pedidosResumoDtoOutputs = pedidoResumoDtoAssembler.toCollectionDtoOutput(pedidosPage.getContent());
-        Page<PedidoResumoDtoOutput> pedidosResumoDtoOutputPage = new PageImpl<>(pedidosResumoDtoOutputs, pageable, pedidosPage.getTotalElements());
-        return pedidosResumoDtoOutputPage;
+
+        return pagedResourcesAssembler.toModel(pedidosPage, pedidoResumoDtoAssembler);
     }
 
     @GetMapping("/{codigoPedido}")
     public PedidoDtoOutput buscar(@PathVariable String codigoPedido) {
         Pedido pedido = pedidoService.buscarOuFalhar(codigoPedido);
-        return pedidoDtoAssembler.toDtoOutput(pedido);
+        return pedidoDtoAssembler.toModel(pedido);
     }
 
     @PostMapping
@@ -94,7 +97,7 @@ public class PedidoController implements PedidoControllerOpenApi {
 
             novoPedido = pedidoService.emitir(novoPedido);
 
-            return pedidoDtoAssembler.toDtoOutput(novoPedido);
+            return pedidoDtoAssembler.toModel(novoPedido);
         } catch (EntidadeNaoEncontradaException e) {
             throw new NegocioException(e.getMessage(), e);
         }

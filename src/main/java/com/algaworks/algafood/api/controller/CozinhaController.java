@@ -10,15 +10,15 @@ import com.algaworks.algafood.domain.repository.CozinhaRepository;
 import com.algaworks.algafood.domain.service.CozinhaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
+import org.springframework.data.web.PagedResourcesAssembler;
+import org.springframework.hateoas.PagedModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.List;
 
 @RestController
 @RequestMapping(path = "/cozinhas", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -36,25 +36,29 @@ public class CozinhaController implements CozinhaControllerOpenApi {
     @Autowired
     CozinhaDtoDisassembler cozinhaDtoDisassembler;
 
+    @Autowired
+    private PagedResourcesAssembler<Cozinha> pagedResourcesAssembler;
+
     @GetMapping
-    public Page<CozinhaDtoOutput> listar(@PageableDefault(size = 10) Pageable pageable) {
+    public PagedModel<CozinhaDtoOutput> listar(@PageableDefault(size = 10) Pageable pageable) {
         Page<Cozinha> cozinhasPage = cozinhaRepository.findAll(pageable);
-        List<CozinhaDtoOutput> cozinhasDtoOutput = cozinhaDtoAssembler.toCollectionDtoOutput(cozinhasPage.getContent());
-        Page<CozinhaDtoOutput> cozinhasDtoOutputPage = new PageImpl<>(cozinhasDtoOutput, pageable, cozinhasPage.getTotalElements());
-        return cozinhasDtoOutputPage;
+
+        PagedModel<CozinhaDtoOutput> cozinhasDtoOutput = pagedResourcesAssembler.toModel(cozinhasPage, cozinhaDtoAssembler);
+
+        return cozinhasDtoOutput;
     }
 
     @GetMapping("/{id}")
     public CozinhaDtoOutput buscar(@PathVariable Long id) {
         Cozinha cozinha = cozinhaService.buscarOuFalhar(id);
-        return cozinhaDtoAssembler.toDtoOutput(cozinha);
+        return cozinhaDtoAssembler.toModel(cozinha);
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public CozinhaDtoOutput adicionar(@Valid @RequestBody CozinhaDtoInput cozinhaDtoInput) {
         Cozinha cozinha = cozinhaDtoDisassembler.toDomainModel(cozinhaDtoInput);
-        return cozinhaDtoAssembler.toDtoOutput(cozinhaService.salvar(cozinha));
+        return cozinhaDtoAssembler.toModel(cozinhaService.salvar(cozinha));
     }
 
     @PutMapping("/{id}")
@@ -62,7 +66,7 @@ public class CozinhaController implements CozinhaControllerOpenApi {
         Cozinha cozinhaAtual = cozinhaService.buscarOuFalhar(id);
         cozinhaDtoDisassembler.copyToDomainModel(cozinhaDtoInput, cozinhaAtual);
 //        BeanUtils.copyProperties(cozinha, cozinhaAtual, "id");
-        return cozinhaDtoAssembler.toDtoOutput(cozinhaRepository.save(cozinhaAtual));
+        return cozinhaDtoAssembler.toModel(cozinhaRepository.save(cozinhaAtual));
     }
 
     @DeleteMapping("/{id}")

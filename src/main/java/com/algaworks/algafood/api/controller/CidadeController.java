@@ -1,5 +1,6 @@
 package com.algaworks.algafood.api.controller;
 
+import com.algaworks.algafood.api.ResourceUriHelper;
 import com.algaworks.algafood.api.assembler.cidade.CidadeDtoAssembler;
 import com.algaworks.algafood.api.assembler.cidade.CidadeDtoDisassembler;
 import com.algaworks.algafood.api.model.dto.input.CidadeDtoInput;
@@ -11,6 +12,7 @@ import com.algaworks.algafood.domain.model.Cidade;
 import com.algaworks.algafood.domain.repository.CidadeRepository;
 import com.algaworks.algafood.domain.service.CidadeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.CollectionModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -35,15 +37,31 @@ public class CidadeController implements CidadeControllerOpenApi {
     CidadeDtoDisassembler cidadeDtoDisassembler;
 
     @GetMapping
-    public List<CidadeDtoOutput> listar() {
+    public CollectionModel<CidadeDtoOutput> listar() {
         List<Cidade> cidades = cidadeRepository.findAll();
-        return cidadeDtoAssembler.toCollectionDtoOutput(cidades);
+        return cidadeDtoAssembler.toCollectionModel(cidades);
     }
 
     @GetMapping("/{id}")
     public CidadeDtoOutput buscar(@PathVariable Long id) {
         Cidade cidade = cidadeService.buscarOuFalhar(id);
-        return cidadeDtoAssembler.toDtoOutput(cidade);
+
+//        cidadeDtoOutput.add(new Link("http://localhost:8080/cidades/1", IanaLinkRelations.SELF));
+//        cidadeDtoOutput.add(new Link("http://localhost:8080/cidades/1", IanaLinkRelations.COLLECTION));
+//        cidadeDtoOutput.add(new Link("http://localhost:8080/cidades/1"));
+//        cidadeDtoOutput.add(new Link("http://localhost:8080/cidades", "cidades"));
+//        cidadeDtoOutput.getEstado().add(new Link("http://localhost:8080/estados/1"));
+
+//        cidadeDtoOutput.add(WebMvcLinkBuilder.linkTo(CidadeController.class)
+//                .slash(cidadeDtoOutput.getId()).withSelfRel());
+
+//        cidadeDtoOutput.add(WebMvcLinkBuilder.linkTo(CidadeController.class)
+//                .withRel("cidades"));
+
+//        cidadeDtoOutput.getEstado().add(WebMvcLinkBuilder.linkTo(EstadoController.class)
+//                .slash(cidadeDtoOutput.getEstado().getId()).withSelfRel());
+
+        return cidadeDtoAssembler.toModel(cidade);
     }
 
     @PostMapping
@@ -51,7 +69,9 @@ public class CidadeController implements CidadeControllerOpenApi {
     public CidadeDtoOutput adicionar(@RequestBody @Valid CidadeDtoInput cidadeDtoInput) {
         try {
             Cidade cidade = cidadeDtoDisassembler.toDomainModel(cidadeDtoInput);
-            return cidadeDtoAssembler.toDtoOutput(cidadeService.salvar(cidade));
+            CidadeDtoOutput cidadeDtoOutput = cidadeDtoAssembler.toModel(cidadeService.salvar(cidade));
+            ResourceUriHelper.addUriInResponseHeader(cidadeDtoOutput.getId());
+            return cidadeDtoOutput;
         } catch (EstadoNaoEncontradoException e) {
             throw new NegocioException(e.getMessage(), e);
         }
@@ -63,7 +83,7 @@ public class CidadeController implements CidadeControllerOpenApi {
             Cidade cidadeAtual = cidadeService.buscarOuFalhar(id);
             cidadeDtoDisassembler.copyToDomainModel(cidadeDtoInput, cidadeAtual);
 //            BeanUtils.copyProperties(cidadeDtoInput, cidadeAtual, "id");
-            return cidadeDtoAssembler.toDtoOutput(cidadeService.salvar(cidadeAtual));
+            return cidadeDtoAssembler.toModel(cidadeService.salvar(cidadeAtual));
         } catch (EstadoNaoEncontradoException e) {
             throw new NegocioException(e.getMessage(), e);
         }

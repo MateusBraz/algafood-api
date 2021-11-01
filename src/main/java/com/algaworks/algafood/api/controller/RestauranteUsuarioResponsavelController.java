@@ -6,11 +6,11 @@ import com.algaworks.algafood.api.openapi.controller.RestauranteUsuarioResponsav
 import com.algaworks.algafood.domain.model.Restaurante;
 import com.algaworks.algafood.domain.service.RestauranteService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.CollectionModel;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping(path = "/restaurantes/{restauranteId}/responsaveis", produces = MediaType.APPLICATION_JSON_VALUE)
@@ -23,9 +23,11 @@ public class RestauranteUsuarioResponsavelController implements RestauranteUsuar
     private UsuarioDtoAssembler usuarioDtoAssembler;
 
     @GetMapping
-    public List<UsuarioDtoOutput> listar(@PathVariable Long restauranteId) {
+    public CollectionModel<UsuarioDtoOutput> listar(@PathVariable Long restauranteId) {
         Restaurante restaurante = restauranteService.buscarOuFalhar(restauranteId);
-        return usuarioDtoAssembler.toCollectionDtoOutput(restaurante.getResponsaveis());
+        return usuarioDtoAssembler.toCollectionModel(restaurante.getResponsaveis())
+                .removeLinks()
+                .add(WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(RestauranteUsuarioResponsavelController.class).listar(restauranteId)).withSelfRel());
     }
 
     @PutMapping("/{usuarioId}")

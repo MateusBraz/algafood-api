@@ -3,12 +3,13 @@ package com.algaworks.algafood.api.model.dto.output;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.hateoas.RepresentationModel;
 
 import java.math.BigDecimal;
 
 @Getter
 @Setter
-public class ItemPedidoDtoOutput {
+public class ItemPedidoDtoOutput extends RepresentationModel<ItemPedidoDtoOutput> {
 
     @ApiModelProperty(example = "1")
     private Long produtoId;
