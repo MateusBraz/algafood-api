@@ -3,17 +3,17 @@ package com.algaworks.algafood.api.openapi.controller;
 import com.algaworks.algafood.api.exceptionhandler.Problem;
 import com.algaworks.algafood.api.model.dto.input.FormaPagamentoDtoInput;
 import com.algaworks.algafood.api.model.dto.output.FormaPagamentoDtoOutput;
+import com.algaworks.algafood.api.openapi.model.FormasPagamentoModelOpenApi;
 import io.swagger.annotations.*;
+import org.springframework.hateoas.CollectionModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.context.request.ServletWebRequest;
-
-import java.util.List;
 
 @Api(tags = "Formas de pagamento")
 public interface FormaPagamentoControllerOpenApi {
 
-    @ApiOperation("Lista as formas de pagamento")
-    ResponseEntity<List<FormaPagamentoDtoOutput>> listar(ServletWebRequest request);
+    @ApiOperation(value = "Lista as formas de pagamento", response = FormasPagamentoModelOpenApi.class)
+    ResponseEntity<CollectionModel<FormaPagamentoDtoOutput>> listar(ServletWebRequest request);
 
     @ApiOperation("Busca uma forma de pagamento por ID")
     @ApiResponses({@ApiResponse(code = 400, message = "ID da forma de pagamento inválido", response = Problem.class), @ApiResponse(code = 404, message = "Forma de pagamento não encontrada", response = Problem.class)})

@@ -1,14 +1,13 @@
 package com.algaworks.algafood.api.assembler.usuario;
 
+import com.algaworks.algafood.api.AlgaLinks;
 import com.algaworks.algafood.api.controller.UsuarioController;
-import com.algaworks.algafood.api.controller.UsuarioGrupoController;
 import com.algaworks.algafood.api.model.dto.output.UsuarioDtoOutput;
 import com.algaworks.algafood.domain.model.Usuario;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
-import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -16,6 +15,9 @@ public class UsuarioDtoAssembler extends RepresentationModelAssemblerSupport<Usu
 
     @Autowired
     private ModelMapper modelMapper;
+
+    @Autowired
+    private AlgaLinks algaLinks;
 
     public UsuarioDtoAssembler() {
         super(UsuarioController.class, UsuarioDtoOutput.class);
@@ -26,15 +28,15 @@ public class UsuarioDtoAssembler extends RepresentationModelAssemblerSupport<Usu
         UsuarioDtoOutput usuarioDtoOutput = createModelWithId(usuario.getId(), usuario);
         modelMapper.map(usuario, usuarioDtoOutput);
 
-        usuarioDtoOutput.add(WebMvcLinkBuilder.linkTo(UsuarioController.class).withRel("usuarios"));
-        usuarioDtoOutput.add(WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(UsuarioGrupoController.class).listar(usuario.getId())).withRel("grupos-usuario"));
+        usuarioDtoOutput.add(algaLinks.linkToUsuarios("usuarios"));
+        usuarioDtoOutput.add(algaLinks.linkToGruposUsuario(usuario.getId(), "grupos-usuario"));
 
         return usuarioDtoOutput;
     }
 
     @Override
     public CollectionModel<UsuarioDtoOutput> toCollectionModel(Iterable<? extends Usuario> entities) {
-        return super.toCollectionModel(entities).add(WebMvcLinkBuilder.linkTo(UsuarioController.class).withSelfRel());
+        return super.toCollectionModel(entities).add(algaLinks.linkToUsuarios());
     }
 
     //    public List<UsuarioDtoOutput> toCollectionDtoOutput(Collection<Usuario> usuarios) {

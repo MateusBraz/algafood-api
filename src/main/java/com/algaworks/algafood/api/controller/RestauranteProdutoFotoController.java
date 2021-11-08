@@ -43,7 +43,7 @@ public class RestauranteProdutoFotoController implements RestauranteProdutoFotoC
     @GetMapping
     public FotoProdutoDtoOutput buscar(@PathVariable Long restauranteId, @PathVariable Long produtoId) {
         FotoProduto fotoProduto = catalogoFotoProdutoService.buscarOuFalhar(restauranteId, produtoId);
-        return fotoProdutoDtoAssembler.toDtoOutput(fotoProduto);
+        return fotoProdutoDtoAssembler.toModel(fotoProduto);
     }
 
     @GetMapping(produces = MediaType.ALL_VALUE)
@@ -90,7 +90,7 @@ public class RestauranteProdutoFotoController implements RestauranteProdutoFotoC
 
         foto = catalogoFotoProdutoService.salvar(foto, arquivo.getInputStream());
 
-        return fotoProdutoDtoAssembler.toDtoOutput(foto);
+        return fotoProdutoDtoAssembler.toModel(foto);
     }
 
     @DeleteMapping

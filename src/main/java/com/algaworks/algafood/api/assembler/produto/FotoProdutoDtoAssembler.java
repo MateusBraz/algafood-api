@@ -1,19 +1,36 @@
 package com.algaworks.algafood.api.assembler.produto;
 
+import com.algaworks.algafood.api.AlgaLinks;
+import com.algaworks.algafood.api.controller.RestauranteProdutoFotoController;
 import com.algaworks.algafood.api.model.dto.output.FotoProdutoDtoOutput;
 import com.algaworks.algafood.domain.model.FotoProduto;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
 import org.springframework.stereotype.Component;
 
 @Component
-public class FotoProdutoDtoAssembler {
+public class FotoProdutoDtoAssembler extends RepresentationModelAssemblerSupport<FotoProduto, FotoProdutoDtoOutput> {
 
     @Autowired
     private ModelMapper modelMapper;
 
-    public FotoProdutoDtoOutput toDtoOutput(FotoProduto fotoProduto) {
-        return modelMapper.map(fotoProduto, FotoProdutoDtoOutput.class);
+    @Autowired
+    private AlgaLinks algaLinks;
+
+    public FotoProdutoDtoAssembler() {
+        super(RestauranteProdutoFotoController.class, FotoProdutoDtoOutput.class);
+    }
+
+    @Override
+    public FotoProdutoDtoOutput toModel(FotoProduto fotoProduto) {
+        FotoProdutoDtoOutput fotoProdutoModel = modelMapper.map(fotoProduto, FotoProdutoDtoOutput.class);
+
+        fotoProdutoModel.add(algaLinks.linkToFotoProduto(fotoProduto.getRestauranteId(), fotoProduto.getProduto().getId()));
+
+        fotoProdutoModel.add(algaLinks.linkToProduto(fotoProduto.getRestauranteId(), fotoProduto.getProduto().getId(), "produto"));
+
+        return fotoProdutoModel;
     }
 
 }

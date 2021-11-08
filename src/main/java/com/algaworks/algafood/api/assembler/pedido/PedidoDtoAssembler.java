@@ -1,6 +1,7 @@
 package com.algaworks.algafood.api.assembler.pedido;
 
-import com.algaworks.algafood.api.controller.*;
+import com.algaworks.algafood.api.AlgaLinks;
+import com.algaworks.algafood.api.controller.PedidoController;
 import com.algaworks.algafood.api.model.dto.output.PedidoDtoOutput;
 import com.algaworks.algafood.domain.model.Pedido;
 import org.modelmapper.ModelMapper;
@@ -15,32 +16,44 @@ public class PedidoDtoAssembler extends RepresentationModelAssemblerSupport<Pedi
     @Autowired
     private ModelMapper modelMapper;
 
+    @Autowired
+    private AlgaLinks algaLinks;
+
     public PedidoDtoAssembler() {
         super(PedidoController.class, PedidoDtoOutput.class);
     }
 
     public PedidoDtoOutput toModel(Pedido pedido) {
         PedidoDtoOutput pedidoDtoOutput = createModelWithId(pedido.getCodigo(), pedido);
+
         modelMapper.map(pedido, pedidoDtoOutput);
 
         pedidoDtoOutput.add(WebMvcLinkBuilder.linkTo(PedidoController.class).withRel("pedidos"));
 
-        pedidoDtoOutput.getRestaurante().add(WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(RestauranteController.class)
-                .buscar(pedido.getRestaurante().getId())).withSelfRel());
+        pedidoDtoOutput.add(algaLinks.linkToPedidos("pedidos"));
 
-        pedidoDtoOutput.getCliente().add(WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(UsuarioController.class)
-                .buscar(pedido.getCliente().getId())).withSelfRel());
+        if (pedido.podeSerConfirmado()) {
+            pedidoDtoOutput.add(algaLinks.linkToConfirmacaoPedido(pedido.getCodigo(), "confirmar"));
+        }
 
-        pedidoDtoOutput.getFormaPagamento().add(WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(FormaPagamentoController.class)
-                .buscar(pedido.getFormaPagamento().getId())).withSelfRel());
+        if (pedido.podeSerEntregue()) {
+            pedidoDtoOutput.add(algaLinks.linkToEntregaPedido(pedido.getCodigo(), "entregar"));
+        }
 
-        pedidoDtoOutput.getEnderecoEntrega().getCidade().add(WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(CidadeController.class)
-                .buscar(pedido.getEnderecoEntrega().getCidade().getId())).withSelfRel());
+        if (pedido.podeSerCancelado()) {
+            pedidoDtoOutput.add(algaLinks.linkToCancelamentoPedido(pedido.getCodigo(), "cancelar"));
+        }
+
+        pedidoDtoOutput.getRestaurante().add(algaLinks.linkToRestaurante(pedido.getRestaurante().getId()));
+
+        pedidoDtoOutput.getCliente().add(algaLinks.linkToUsuario(pedido.getCliente().getId()));
+
+        pedidoDtoOutput.getFormaPagamento().add(algaLinks.linkToFormaPagamento(pedido.getFormaPagamento().getId()));
+
+        pedidoDtoOutput.getEnderecoEntrega().getCidade().add(algaLinks.linkToCidade(pedido.getEnderecoEntrega().getCidade().getId()));
 
         pedidoDtoOutput.getItens().forEach(item -> {
-            item.add(WebMvcLinkBuilder.linkTo(WebMvcLinkBuilder.methodOn(RestauranteProdutoController.class)
-                            .buscar(pedidoDtoOutput.getRestaurante().getId(), item.getProdutoId()))
-                    .withRel("produto"));
+            item.add(algaLinks.linkToProduto(pedidoDtoOutput.getRestaurante().getId(), item.getProdutoId(), "produto"));
         });
 
         return pedidoDtoOutput;

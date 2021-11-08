@@ -1,18 +1,19 @@
 package com.algaworks.algafood.core.springfox;
 
 import com.algaworks.algafood.api.exceptionhandler.Problem;
-import com.algaworks.algafood.api.model.dto.output.CozinhaDtoOutput;
+import com.algaworks.algafood.api.model.dto.output.*;
 import com.algaworks.algafood.api.model.dto.output.resumo.PedidoResumoDtoOutput;
-import com.algaworks.algafood.api.openapi.model.CozinhasModelOpenApi;
-import com.algaworks.algafood.api.openapi.model.PageableModelOpenApi;
-import com.algaworks.algafood.api.openapi.model.PedidosResumoModelOpenApi;
+import com.algaworks.algafood.api.model.dto.output.resumo.RestauranteBasicoDtoOutput;
+import com.algaworks.algafood.api.openapi.model.*;
 import com.fasterxml.classmate.TypeResolver;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.core.io.Resource;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.hateoas.CollectionModel;
+import org.springframework.hateoas.Links;
+import org.springframework.hateoas.PagedModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.context.request.ServletWebRequest;
@@ -71,8 +72,17 @@ public class SpringFoxConfig implements WebMvcConfigurer {
                 .additionalModels(typeResolver.resolve(Problem.class))
                 .ignoredParameterTypes(ServletWebRequest.class, URL.class, URI.class, URLStreamHandler.class, Resource.class, File.class, InputStream.class)
                 .directModelSubstitute(Pageable.class, PageableModelOpenApi.class)
-                .alternateTypeRules(AlternateTypeRules.newRule(typeResolver.resolve(Page.class, CozinhaDtoOutput.class), CozinhasModelOpenApi.class))
-                .alternateTypeRules(AlternateTypeRules.newRule(typeResolver.resolve(Page.class, PedidoResumoDtoOutput.class), PedidosResumoModelOpenApi.class))
+                .directModelSubstitute(Links.class, LinksModelOpenApi.class)
+                .alternateTypeRules(AlternateTypeRules.newRule(typeResolver.resolve(PagedModel.class, CozinhaDtoOutput.class), CozinhasModelOpenApi.class))
+                .alternateTypeRules(AlternateTypeRules.newRule(typeResolver.resolve(PagedModel.class, PedidoResumoDtoOutput.class), PedidosResumoModelOpenApi.class))
+                .alternateTypeRules(AlternateTypeRules.newRule(typeResolver.resolve(CollectionModel.class, CidadeDtoOutput.class), CidadesModelOpenApi.class))
+                .alternateTypeRules(AlternateTypeRules.newRule(typeResolver.resolve(CollectionModel.class, EstadoDtoOutput.class), EstadosModelOpenApi.class))
+                .alternateTypeRules(AlternateTypeRules.newRule(typeResolver.resolve(CollectionModel.class, FormaPagamentoDtoOutput.class), FormasPagamentoModelOpenApi.class))
+                .alternateTypeRules(AlternateTypeRules.newRule(typeResolver.resolve(CollectionModel.class, GrupoDtoOutput.class), GruposModelOpenApi.class))
+                .alternateTypeRules(AlternateTypeRules.newRule(typeResolver.resolve(CollectionModel.class, PermissaoDtoOutput.class), PermissoesModelOpenApi.class))
+                .alternateTypeRules(AlternateTypeRules.newRule(typeResolver.resolve(CollectionModel.class, ProdutoDtoOutput.class), ProdutosModelOpenApi.class))
+                .alternateTypeRules(AlternateTypeRules.newRule(typeResolver.resolve(CollectionModel.class, RestauranteBasicoDtoOutput.class), RestaurantesBasicoModelOpenApi.class))
+                .alternateTypeRules(AlternateTypeRules.newRule(typeResolver.resolve(CollectionModel.class, UsuarioDtoOutput.class), UsuariosModelOpenApi.class))
                 .apiInfo(apiInfo())
                 .tags(new Tag("Cidades", "Gerencia as cidades"),
                         new Tag("Grupos", "Gerencia os grupos de usuários"),
@@ -83,7 +93,8 @@ public class SpringFoxConfig implements WebMvcConfigurer {
                         new Tag("Estados", "Gerencia os estados"),
                         new Tag("Produtos", "Gerencia os produtos de restaurantes"),
                         new Tag("Usuários", "Gerencia os usuários"),
-                        new Tag("Estatísticas", "Estatísticas da AlgaFood"));
+                        new Tag("Estatísticas", "Estatísticas da AlgaFood"),
+                        new Tag("Permissões", "Gerencia as permissões"));
     }
 
     private ApiInfo apiInfo() {
