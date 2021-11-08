@@ -9,6 +9,7 @@ import com.algaworks.algafood.domain.model.Grupo;
 import com.algaworks.algafood.domain.repository.GrupoRepository;
 import com.algaworks.algafood.domain.service.GrupoService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.CollectionModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -33,29 +34,29 @@ public class GrupoController implements GrupoControllerOpenApi {
     private GrupoDtoDisassembler grupoDtoDisassembler;
 
     @GetMapping
-    public List<GrupoDtoOutput> listar() {
+    public CollectionModel<GrupoDtoOutput> listar() {
         List<Grupo> grupos = grupoRepository.findAll();
-        return grupoDtoAssembler.toCollectionDtoOutput(grupos);
+        return grupoDtoAssembler.toCollectionModel(grupos);
     }
 
     @GetMapping("/{id}")
     public GrupoDtoOutput buscar(@PathVariable Long id) {
         Grupo grupo = grupoService.buscarOuFalhar(id);
-        return grupoDtoAssembler.toDtoOutput(grupo);
+        return grupoDtoAssembler.toModel(grupo);
     }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public GrupoDtoOutput adicionar(@RequestBody @Valid GrupoDtoInput grupoDtoInput) {
         Grupo grupo = grupoDtoDisassembler.toDomainModel(grupoDtoInput);
-        return grupoDtoAssembler.toDtoOutput(grupoService.salvar(grupo));
+        return grupoDtoAssembler.toModel(grupoService.salvar(grupo));
     }
 
     @PutMapping("/{id}")
     public GrupoDtoOutput atualizar(@PathVariable Long id, @RequestBody @Valid GrupoDtoInput grupoDtoInput) {
         Grupo grupo = grupoService.buscarOuFalhar(id);
         grupoDtoDisassembler.copyToDomainModel(grupoDtoInput, grupo);
-        return grupoDtoAssembler.toDtoOutput(grupoService.salvar(grupo));
+        return grupoDtoAssembler.toModel(grupoService.salvar(grupo));
     }
 
     @DeleteMapping("/{id}")

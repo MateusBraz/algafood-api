@@ -11,6 +11,7 @@ import com.algaworks.algafood.domain.model.Usuario;
 import com.algaworks.algafood.domain.repository.UsuarioRepository;
 import com.algaworks.algafood.domain.service.UsuarioService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.hateoas.CollectionModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
@@ -36,16 +37,16 @@ public class UsuarioController implements UsuarioControllerOpenApi {
 
     @Override
     @GetMapping
-    public List<UsuarioDtoOutput> listar() {
+    public CollectionModel<UsuarioDtoOutput> listar() {
         List<Usuario> todasUsuarios = usuarioRepository.findAll();
-        return usuarioDtoAssembler.toCollectionDtoOutput(todasUsuarios);
+        return usuarioDtoAssembler.toCollectionModel(todasUsuarios);
     }
 
     @Override
     @GetMapping("/{usuarioId}")
     public UsuarioDtoOutput buscar(@PathVariable Long usuarioId) {
         Usuario usuario = usuarioService.buscarOuFalhar(usuarioId);
-        return usuarioDtoAssembler.toDtoOutput(usuario);
+        return usuarioDtoAssembler.toModel(usuario);
     }
 
     @Override
@@ -54,7 +55,7 @@ public class UsuarioController implements UsuarioControllerOpenApi {
     public UsuarioDtoOutput adicionar(@RequestBody @Valid UsuarioComSenhaDtoInput usuarioInput) {
         Usuario usuario = usuarioDtoDisassembler.toDomainModel(usuarioInput);
         usuario = usuarioService.salvar(usuario);
-        return usuarioDtoAssembler.toDtoOutput(usuario);
+        return usuarioDtoAssembler.toModel(usuario);
     }
 
     @Override
@@ -64,7 +65,7 @@ public class UsuarioController implements UsuarioControllerOpenApi {
         Usuario usuarioAtual = usuarioService.buscarOuFalhar(usuarioId);
         usuarioDtoDisassembler.copyToDomainModel(usuarioInput, usuarioAtual);
         usuarioAtual = usuarioService.salvar(usuarioAtual);
-        return usuarioDtoAssembler.toDtoOutput(usuarioAtual);
+        return usuarioDtoAssembler.toModel(usuarioAtual);
     }
 
     @Override

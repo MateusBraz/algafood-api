@@ -4,14 +4,13 @@ import com.algaworks.algafood.api.exceptionhandler.Problem;
 import com.algaworks.algafood.api.model.dto.input.EstadoDtoInput;
 import com.algaworks.algafood.api.model.dto.output.EstadoDtoOutput;
 import io.swagger.annotations.*;
-
-import java.util.List;
+import org.springframework.hateoas.CollectionModel;
 
 @Api(tags = "Estados")
 public interface EstadoControllerOpenApi {
 
     @ApiOperation("Lista os estados")
-    List<EstadoDtoOutput> listar();
+    CollectionModel<EstadoDtoOutput> listar();
 
     @ApiOperation("Busca um estado por ID")
     @ApiResponses({

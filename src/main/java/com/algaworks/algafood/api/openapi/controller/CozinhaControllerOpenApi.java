@@ -4,14 +4,14 @@ import com.algaworks.algafood.api.exceptionhandler.Problem;
 import com.algaworks.algafood.api.model.dto.input.CozinhaDtoInput;
 import com.algaworks.algafood.api.model.dto.output.CozinhaDtoOutput;
 import io.swagger.annotations.*;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.hateoas.PagedModel;
 
 @Api(tags = "Cozinhas")
 public interface CozinhaControllerOpenApi {
 
     @ApiOperation("Lista as cozinhas compaginação")
-    Page<CozinhaDtoOutput> listar(Pageable pageable);
+    PagedModel<CozinhaDtoOutput> listar(Pageable pageable);
 
     @ApiOperation("Busca uma cozinha por ID")
     @ApiResponses({@ApiResponse(code = 400, message = "ID da cozinha inválido", response = Problem.class), @ApiResponse(code = 404, message = "Cozinha não encontrada", response = Problem.class)})

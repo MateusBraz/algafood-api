@@ -6,15 +6,15 @@ import com.algaworks.algafood.api.model.dto.output.PedidoDtoOutput;
 import com.algaworks.algafood.api.model.dto.output.resumo.PedidoResumoDtoOutput;
 import com.algaworks.algafood.domain.filter.PedidoFilter;
 import io.swagger.annotations.*;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.hateoas.PagedModel;
 
 @Api(tags = "Pedidos")
 public interface PedidoControllerOpenApi {
 
     @ApiImplicitParams({@ApiImplicitParam(value = "Nomes das propriedades para filtrar na resposta, separados por vírgula", name = "campos", paramType = "query", type = "string")})
     @ApiOperation("Pesquisa os pedidos")
-    Page<PedidoResumoDtoOutput> pesquisar(PedidoFilter filtro, Pageable pageable);
+    PagedModel<PedidoResumoDtoOutput> pesquisar(PedidoFilter filtro, Pageable pageable);
 
     @ApiImplicitParams({@ApiImplicitParam(value = "Nomes das propriedades para filtrar na resposta, separados por vírgula", name = "campos", paramType = "query", type = "string")})
     @ApiOperation("Busca um pedido por código")
