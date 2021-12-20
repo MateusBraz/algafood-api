@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5c3bf61d-32a0-4bd7-8e1a-d09b75c166bd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/exceptionhandler/ProblemType.java" beforeDir="false" afterPath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/exceptionhandler/ProblemType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/security/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/security/ResourceServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/algafood-api/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/algafood-auth/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-auth/src/main/java/com/algaworks/algafood/auth/AuthorizationServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/algafood-auth/src/main/java/com/algaworks/algafood/auth/AuthorizationServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-auth/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/algafood-auth/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="com.haulmont.jpb.jpaPalette" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="com.haulmont.jpb.jpaPalette" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="false" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectId" id="2266hncpLNxdIZqFXqVHrdE8TO4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../blog-simplestchatever-master" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.AlgafoodApiApplication">
+    <configuration name="AlgafoodApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="algafood-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.algaworks.algafood.AlgafoodApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="algafood-auth" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.algaworks.algafood.auth.AuthApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5c3bf61d-32a0-4bd7-8e1a-d09b75c166bd" name="Changes" comment="" />
+      <created>1639145810914</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639145810914</updated>
+      <workItem from="1639145814312" duration="401000" />
+      <workItem from="1639146299906" duration="1375000" />
+      <workItem from="1639156001260" duration="11000" />
+      <workItem from="1639160637321" duration="986000" />
+      <workItem from="1639163252629" duration="596000" />
+      <workItem from="1639393192451" duration="5646000" />
+      <workItem from="1639481990289" duration="933000" />
+      <workItem from="1639483829174" duration="1223000" />
+      <workItem from="1639493705866" duration="3000" />
+      <workItem from="1639597812000" duration="647000" />
+      <workItem from="1639653953316" duration="61000" />
+      <workItem from="1639678531222" duration="53000" />
+      <workItem from="1639682534184" duration="656000" />
+      <workItem from="1639745868790" duration="99000" />
+      <workItem from="1639746991168" duration="893000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
