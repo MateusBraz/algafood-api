@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="37e07e50-fbe7-4290-86ab-706d451ffce0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__mysql_mysql_connector_java_8_0_27.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_11_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_hibernate_hibernate_core_5_6_1_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_projectlombok_lombok_1_18_22.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_configuration_processor_2_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_6_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_aspects_5_3_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/libraries/Maven__org_springframework_spring_orm_5_3_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/dataSources/e1481278-61df-4c68-9331-29dfe0222f2a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/dataSources/e1481278-61df-4c68-9331-29dfe0222f2a.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/algafood.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1481278-61df-4c68-9331-29dfe0222f2a.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1481278-61df-4c68-9331-29dfe0222f2a/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1481278-61df-4c68-9331-29dfe0222f2a/storage_v2/_src_/schema/mysql.osA4Bg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1481278-61df-4c68-9331-29dfe0222f2a/storage_v2/_src_/schema/performance_schema.kIw0nw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/e1481278-61df-4c68-9331-29dfe0222f2a/storage_v2/_src_/schema/sys.zb4BAA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_core_1_12_88.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_kms_1_12_88.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_aws_java_sdk_s3_1_12_88.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_amazonaws_jmespath_java_1_12_88.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_cbor_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_12_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_bohnman_squiggly_filter_jackson_1_3_18.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_stephenc_jcip_jcip_annotations_1_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_20_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_lowagie_itext_2_1_7_js8.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_content_type_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_lang_tag_1_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_nimbus_jose_jwt_9_8_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_nimbusds_oauth2_oidc_sdk_9_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_jakarta_mail_1_6_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_core_2_3_0_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_xml_bind_jaxb_impl_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_15.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_digester_commons_digester_2_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_6_1_5_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_70_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_70_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_70_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_70_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_70_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_70_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_bean_validators_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_9_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_annotation_jakarta_annotation_api_1_3_5.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_validation_jakarta_validation_api_2_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_9_9.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_25.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_10_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_10_22.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_jcip_jcip_annotations_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_2_4_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_4_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jasperreports_jasperreports_6_17_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_jasperreports_jasperreports_functions_6_17_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr4_runtime_4_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_12_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_14.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_14_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_46.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_55.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_46.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_55.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_46.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_55.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_19_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_64.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_64.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_castor_castor_core_1_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_castor_castor_xml_1_4_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_dom4j_dom4j_2_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jdt_ecj_3_21_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_flywaydb_flyway_core_7_7_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_31.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_2_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_4_31_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_2_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_27_0_GA.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_2_3_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_4_1_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_13_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_common_1_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jfree_jcommon_1_0_23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jfree_jfreechart_1_0_19.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_7_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_2_0_Final.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_3_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_junit_jupiter_3_9_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_modelmapper_modelmapper_2_4_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_3_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_9_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_20.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_devtools_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_hateoas_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_mail_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_oauth2_resource_server_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_5_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_hateoas_spring_hateoas_1_3_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_2_0_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_oauth_spring_security_oauth2_2_3_7_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_5_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_5_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_jwt_1_1_1_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_core_5_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_jose_5_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_oauth2_resource_server_5_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_test_5_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_5_6_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_3_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_7.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_8_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_28.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_29.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__software_amazon_ion_ion_java_1_0_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/AlgafoodApiApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/AlgaLinks.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/ResourceUriHelper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/cidade/CidadeDtoAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/cidade/CidadeDtoDisassembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/cozinha/CozinhaDtoAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/cozinha/CozinhaDtoDisassembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/estado/EstadoDtoAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/estado/EstadoDtoDisassembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/formapagamento/FormaPagamentoDtoAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/formapagamento/FormaPagamentoDtoDisassembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/grupo/GrupoDtoAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/grupo/GrupoDtoDisassembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/pedido/PedidoDtoAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/pedido/PedidoDtoDisassembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/pedido/PedidoResumoDtoAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/permissao/PermissaoDtoAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/produto/FotoProdutoDtoAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/produto/ProdutoDtoAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/produto/ProdutoDtoDisassembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/restaurante/RestauranteApenasDtoAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/restaurante/RestauranteBasicoDtoAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/restaurante/RestauranteDtoAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/restaurante/RestauranteDtoDisassembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/usuario/UsuarioDtoAssembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/assembler/usuario/UsuarioDtoDisassembler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/CidadeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/CozinhaController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/EstadoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/EstatisticasController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/FluxoPedidoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/FormaPagamentoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/GrupoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/GrupoPermissaoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/PedidoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/PermissaoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/RestauranteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/RestauranteFormaPagamentoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/RestauranteProdutoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/RestauranteProdutoFotoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/RestauranteUsuarioResponsavelController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/RootEntryPointController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/TesteController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/UsuarioController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/controller/UsuarioGrupoController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/exceptionhandler/ApiExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/exceptionhandler/Problem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/exceptionhandler/ProblemType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/CidadeDtoInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/CozinhaDtoInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/EnderecoDtoInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/EstadoDtoInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/FormaPagamentoDtoInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/FotoProdutoInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/GrupoDtoInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/ItemPedidoDtoInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/PedidoDtoInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/ProdutoDtoInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/RestauranteDtoInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/SenhaDtoInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/UsuarioComSenhaDtoInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/UsuarioDtoInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/refinput/CidadeIdInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/refinput/CozinhaIdInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/refinput/EstadoIdInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/refinput/FormaPagamentoIdInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/input/refinput/RestauranteIdInput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/output/CidadeDtoOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/output/CozinhaDtoOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/output/EnderecoDtoOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/output/EstadoDtoOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/output/FormaPagamentoDtoOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/output/FotoProdutoDtoOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/output/GrupoDtoOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/output/ItemPedidoDtoOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/output/PedidoDtoOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/output/PermissaoDtoOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/output/ProdutoDtoOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/output/RestauranteDtoOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/output/UsuarioDtoOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/output/resumo/CidadeResumoDtoOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/output/resumo/PedidoResumoDtoOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/output/resumo/RestauranteApenasNomeDtoOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/dto/output/resumo/RestauranteBasicoDtoOutput.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/mixin/CidadeMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/mixin/CozinhaMixin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/model/view/RestauranteView.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/controller/CidadeControllerOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/controller/CozinhaControllerOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/controller/EstadoControllerOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/controller/EstatisticasControllerOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/controller/FluxoPedidoControllerOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/controller/FormaPagamentoControllerOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/controller/GrupoControllerOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/controller/GrupoPermissaoControllerOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/controller/PedidoControllerOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/controller/PermissaoControllerOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/controller/RestauranteControllerOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/controller/RestauranteFormaPagamentoControllerOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/controller/RestauranteProdutoControllerOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/controller/RestauranteProdutoFotoControllerOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/controller/RestauranteUsuarioResponsavelControllerOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/controller/UsuarioControllerOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/controller/UsuarioGrupoControllerOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/model/CidadesModelOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/model/CozinhasModelOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/model/EstadosModelOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/model/FormasPagamentoModelOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/model/GruposModelOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/model/LinksModelOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/model/PageModelOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/model/PageableModelOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/model/PagedModelOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/model/PedidosResumoModelOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/model/PermissoesModelOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/model/ProdutosModelOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/model/RestauranteBasicoModelOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/model/RestaurantesBasicoModelOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/api/openapi/model/UsuariosModelOpenApi.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/data/PageWrapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/data/PageableTranslator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/email/EmailConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/email/EmailProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/jackson/JacksonMixinModule.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/jackson/PageJsonSerializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/modelmapper/ModelMapperConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/security/ResourceServerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/springfox/SpringFoxConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/springfox/adapter/DocumentationPluginsManagerAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/springfox/adapter/TypeNameExtractorAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/squiggly/SquigglyConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/squiggly/TomcatCustomizer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/storage/StorageConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/storage/StorageProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/validation/FileContentType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/validation/FileContentTypeValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/validation/FileSize.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/validation/FileSizeValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/validation/Groups.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/validation/ValidationConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/core/web/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/event/PedidoCanceladoEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/event/PedidoConfirmadoEvent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/exception/CidadeNaoEncontradaException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/exception/CozinhaNaoEncontradaException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/exception/EntidadeEmUsoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/exception/EntidadeNaoEncontradaException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/exception/EstadoNaoEncontradoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/exception/FormaPagamentoNaoEncontradaException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/exception/FotoProdutoNaoEncontradaException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/exception/GrupoNaoEncontradoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/exception/NegocioException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/exception/PedidoNaoEncontradoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/exception/PermissaoNaoEncontradaException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/exception/ProdutoNaoEncontradoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/exception/RestauranteNaoEncontradoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/exception/UsuarioNaoEncontradoException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/filter/PedidoFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/filter/VendaDiariaFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/listener/NotificacaoClientePedidoCanceladoListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/listener/NotificacaoClientePedidoConfirmadoListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/model/Cidade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/model/Cozinha.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/model/Endereco.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/model/Estado.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/model/FormaPagamento.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/model/FotoProduto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/model/Grupo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/model/ItemPedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/model/Pedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/model/Permissao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/model/Produto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/model/Restaurante.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/model/StatusPedido.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/model/Usuario.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/model/dto/VendaDiaria.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/repository/CidadeRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/repository/CozinhaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/repository/CustomJpaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/repository/EstadoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/repository/FormaPagamentoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/repository/GrupoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/repository/PedidoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/repository/PermissaoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/repository/ProdutoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/repository/ProdutoRepositoryQueries.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/repository/RestauranteRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/repository/RestauranteRepositoryQueries.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/repository/UsuarioRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/service/CatalogoFotoProdutoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/service/CidadeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/service/CozinhaService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/service/EnvioEmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/service/EstadoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/service/FluxoPedidoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/service/FormaPagamentoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/service/FotoStorageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/service/GrupoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/service/PedidoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/service/PermissaoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/service/ProdutoService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/service/RestauranteService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/service/UsuarioService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/service/VendaQueryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/domain/service/VendaReportService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/infrastructure/repository/CustomJpaRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/infrastructure/repository/ProdutoRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/infrastructure/repository/RestauranteRepositoryImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/infrastructure/repository/spec/PedidoSpecs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/infrastructure/repository/spec/RestauranteSpecs.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/infrastructure/service/email/EmailException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/infrastructure/service/email/FakeEnvioEmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/infrastructure/service/email/SandboxEnvioEmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/infrastructure/service/email/SmtpEnvioEmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/infrastructure/service/query/VendaQueryServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/infrastructure/service/report/PdfVendaReportService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/infrastructure/service/report/ReportException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/infrastructure/service/storage/LocalFotoStorageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/infrastructure/service/storage/S3FotoStorageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/java/com/algaworks/algafood/infrastructure/service/storage/StorageException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/META-INF/orm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/ValidationMessages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/db/migration/V001__criacao-inicial.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/db/migration/V002__criar-tabela-cidade.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/db/migration/V003__cria-tabela-estado.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/db/migration/V004__cria-tabelas-restantes.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/db/migration/V005__criar-tabelas-pedido-item-pedido.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/db/migration/V006__cria-coluna-ativo-restaurante.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/db/migration/V007__alteracoes-tabela-usuario.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/db/migration/V008__cria-coluna-aberto-restaurante.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/db/migration/V009__criar-tabela-responsavel-restaurante.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/db/migration/V010__cria-coluna-codigo-pedido.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/db/migration/V012__cria-tabela-foto-produto.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/db/migration/V013__cria-coluna-data-atualizacao-tabela-forma-pagamento.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/db/testedata/afterMigrate.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/ddl.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/import.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/relatorios/vendas-diarias.jasper" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/templates/pedido-cancelado.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/main/resources/templates/pedido-confirmado.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/test/java/com/algaworks/algafood/AlgafoodApiApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-api/src/test/java/com/algaworks/algafood/CadastroCozinhaIntegrationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-auth/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-auth/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-auth/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-auth/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-auth/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-auth/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-auth/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-auth/src/main/java/com/algaworks/algafood/auth/AuthApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-auth/src/main/java/com/algaworks/algafood/auth/AuthorizationServerConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-auth/src/main/java/com/algaworks/algafood/auth/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-auth/src/main/java/com/algaworks/algafood/auth/PkceAuthorizationCodeTokenGranter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-auth/src/main/java/com/algaworks/algafood/auth/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algafood-auth/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../algafood-auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../algafood-auth/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../algafood-auth/src/main/java/com/algaworks/algafood/auth/AuthorizationServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../algafood-auth/src/main/java/com/algaworks/algafood/auth/core/AuthorizationServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../algafood-auth/src/main/java/com/algaworks/algafood/auth/CorsConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../algafood-auth/src/main/java/com/algaworks/algafood/auth/core/CorsConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../algafood-auth/src/main/java/com/algaworks/algafood/auth/PkceAuthorizationCodeTokenGranter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../algafood-auth/src/main/java/com/algaworks/algafood/auth/core/PkceAuthorizationCodeTokenGranter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../algafood-auth/src/main/java/com/algaworks/algafood/auth/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../algafood-auth/src/main/java/com/algaworks/algafood/auth/core/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../algafood-auth/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../algafood-auth/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="myId2FirstActivated">
+      <map>
+        <entry key="JPA Inspector" value="true" />
+        <entry key="JPA Palette" value="true" />
+        <entry key="JPA Structure" value="true" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+    <option name="myId2Visible">
+      <map>
+        <entry key="JPA Inspector" value="false" />
+        <entry key="JPA Palette" value="false" />
+        <entry key="JPA Structure" value="false" />
+        <entry key="com.haulmont.jpb.jpaStructure" value="true" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectId" id="1yE3qqwDB6w0Tz1M5Wm4MEtO8YL" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="optimize.imports.on.save" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.39885056" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projetos\algafood-api\src\main\resources\relatorios" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projetos\algafood-api\src\main\java\com\algaworks\algafood\core\security" />
+      <recent name="D:\Projetos\algafood-api\src\main\java\com\algaworks\algafood\core" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.algaworks.algafood.api.openapi.controller" />
+      <recent name="com.algaworks.algafood.api.controller.openapi" />
+      <recent name="com.algaworks.algafood.api.controller" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.algaworks.algafood.infrastructure.service.email" />
+      <recent name="com.algaworks.algafood.api.assembler.produto" />
+      <recent name="com.algaworks.algafood.domain.model" />
+      <recent name="com.algaworks.algafood.infrastructure.repository.spec" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn install" />
+      <command value="mvn package" />
+      <command value="mvn clean" />
+      <command value="mvn compile" />
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="AlgafoodApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="algafood-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.algaworks.algafood.AlgafoodApiApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="algafood.storage.s3.id-chave-acesso" />
+          <option name="value" value="AKIA4UL2VME2CA3VBPLT" />
+        </param>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="algafood.storage.s3.chave-acesso-secreta" />
+          <option name="value" value="sr8dPQn+5SgP3PmH5py9IYMGwNrg8jee6//SHT/I" />
+        </param>
+      </additionalParameters>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="37e07e50-fbe7-4290-86ab-706d451ffce0" name="Changes" comment="" />
+      <created>1631803116362</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1631803116362</updated>
+      <workItem from="1631803121974" duration="2151000" />
+      <workItem from="1631811038406" duration="10446000" />
+      <workItem from="1631877007889" duration="3128000" />
+      <workItem from="1631885398380" duration="2592000" />
+      <workItem from="1631890171099" duration="200000" />
+      <workItem from="1631898742745" duration="53000" />
+      <workItem from="1631898806011" duration="846000" />
+      <workItem from="1632137860763" duration="146000" />
+      <workItem from="1632139572507" duration="803000" />
+      <workItem from="1632157601989" duration="3250000" />
+      <workItem from="1632168519021" duration="909000" />
+      <workItem from="1632169476054" duration="15000" />
+      <workItem from="1632170607675" duration="814000" />
+      <workItem from="1632222489116" duration="1304000" />
+      <workItem from="1632224972128" duration="942000" />
+      <workItem from="1632251370836" duration="264000" />
+      <workItem from="1632254456864" duration="1688000" />
+      <workItem from="1632336629799" duration="2470000" />
+      <workItem from="1632342452793" duration="14000" />
+      <workItem from="1632399372823" duration="322000" />
+      <workItem from="1632400834875" duration="37000" />
+      <workItem from="1632404259121" duration="1604000" />
+      <workItem from="1632418071136" duration="4428000" />
+      <workItem from="1632482578173" duration="5200000" />
+      <workItem from="1632502982606" duration="2059000" />
+      <workItem from="1632741398164" duration="561000" />
+      <workItem from="1632753118017" duration="83000" />
+      <workItem from="1632770997289" duration="893000" />
+      <workItem from="1632835101377" duration="1354000" />
+      <workItem from="1632857893738" duration="1738000" />
+      <workItem from="1632914042486" duration="45000" />
+      <workItem from="1632915829751" duration="109000" />
+      <workItem from="1632924931202" duration="315000" />
+      <workItem from="1632939710751" duration="1180000" />
+      <workItem from="1633027620863" duration="338000" />
+      <workItem from="1633351945860" duration="319000" />
+      <workItem from="1633958024751" duration="5722000" />
+      <workItem from="1633971954550" duration="12975000" />
+      <workItem from="1634123252831" duration="7375000" />
+      <workItem from="1634146213369" duration="5254000" />
+      <workItem from="1634209845380" duration="13345000" />
+      <workItem from="1634232488912" duration="11134000" />
+      <workItem from="1634296037534" duration="10999000" />
+      <workItem from="1634318140796" duration="5328000" />
+      <workItem from="1634555185000" duration="19000" />
+      <workItem from="1634814158503" duration="10363000" />
+      <workItem from="1634835894702" duration="11000" />
+      <workItem from="1634901342775" duration="11771000" />
+      <workItem from="1634922389880" duration="596000" />
+      <workItem from="1634924272553" duration="594000" />
+      <workItem from="1634927448275" duration="6995000" />
+      <workItem from="1635160011699" duration="91000" />
+      <workItem from="1635164801090" duration="5482000" />
+      <workItem from="1635181475908" duration="592000" />
+      <workItem from="1635183423366" duration="104000" />
+      <workItem from="1635183548650" duration="87000" />
+      <workItem from="1635183672487" duration="7260000" />
+      <workItem from="1635254276230" duration="4211000" />
+      <workItem from="1635268006049" duration="9274000" />
+      <workItem from="1635333075035" duration="6980000" />
+      <workItem from="1635341095818" duration="5071000" />
+      <workItem from="1635355214089" duration="30000" />
+      <workItem from="1635419790199" duration="13407000" />
+      <workItem from="1635440666256" duration="12353000" />
+      <workItem from="1635505660825" duration="6862000" />
+      <workItem from="1635527072929" duration="100000" />
+      <workItem from="1635765037839" duration="12056000" />
+      <workItem from="1635786016010" duration="9154000" />
+      <workItem from="1635937790080" duration="3196000" />
+      <workItem from="1635946338279" duration="1188000" />
+      <workItem from="1635959090862" duration="7582000" />
+      <workItem from="1636024145986" duration="9237000" />
+      <workItem from="1636045397974" duration="2891000" />
+      <workItem from="1636048328551" duration="9470000" />
+      <workItem from="1636369655031" duration="13363000" />
+      <workItem from="1636390930721" duration="5169000" />
+      <workItem from="1636456939813" duration="59000" />
+      <workItem from="1636543904137" duration="9116000" />
+      <workItem from="1636573649667" duration="74000" />
+      <workItem from="1636639102086" duration="2625000" />
+      <workItem from="1636650283911" duration="2763000" />
+      <workItem from="1636715375377" duration="1298000" />
+      <workItem from="1636736898400" duration="2350000" />
+      <workItem from="1637148306946" duration="4284000" />
+      <workItem from="1637165573368" duration="149000" />
+      <workItem from="1637173499816" duration="1581000" />
+      <workItem from="1637233831681" duration="6968000" />
+      <workItem from="1637251299178" duration="5310000" />
+      <workItem from="1637320863514" duration="99000" />
+      <workItem from="1637321244400" duration="1217000" />
+      <workItem from="1637324589589" duration="103000" />
+      <workItem from="1637338129637" duration="1307000" />
+      <workItem from="1637340206958" duration="2065000" />
+      <workItem from="1637346666187" duration="1884000" />
+      <workItem from="1637679449594" duration="261000" />
+      <workItem from="1637687228587" duration="1087000" />
+      <workItem from="1637689907046" duration="1088000" />
+      <workItem from="1637691021067" duration="1586000" />
+      <workItem from="1637757451396" duration="3181000" />
+      <workItem from="1639145577607" duration="27000" />
+      <workItem from="1639146264023" duration="32000" />
+      <workItem from="1639400674027" duration="2920000" />
+      <workItem from="1639415154800" duration="425000" />
+      <workItem from="1639425394867" duration="63000" />
+      <workItem from="1639481973351" duration="12000" />
+      <workItem from="1639482991654" duration="680000" />
+      <workItem from="1641472591530" duration="47000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/algaworks/algafood/infrastructure/service/query/VendaQueryServiceImpl.java</url>
+          <line>24</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
