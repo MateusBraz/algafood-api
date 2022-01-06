@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="algafood@localhost" uuid="e1481278-61df-4c68-9331-29dfe0222f2a">
+    <data-source source="LOCAL" name="algafood@localhost" uuid="9dfbe452-702b-49c1-a838-afb55e54b410">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306/algafood</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
+      <time-zone>UCT</time-zone>
     </data-source>
   </component>
 </project>
